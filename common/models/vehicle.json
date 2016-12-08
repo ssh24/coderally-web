@@ -1,0 +1,36 @@
+{
+  "name": "Vehicle",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "vName": {
+      "type": "string",
+      "required": true
+    },
+    "vObject": {
+      "type": "string",
+      "required": true
+    },
+    "vInfo": {
+      "type": "string",
+      "required": true
+    },
+    "vImage": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "tracks": {
+      "type": "hasMany",
+      "model": "Track",
+      "foreignKey": "trackId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
