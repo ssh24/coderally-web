@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
-  <head>
-    <meta charset="utf-8">
-    <title>Code Rally Web - An online racing game</title>
-    <link href="css/style.css" rel="stylesheet">
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li>
-            <a ui-sref="all-tracks" ui-sref-active="active">Tracks</a>
-          </li>
-      </nav>
-    </header>
-
-    <main ui-view></main>
-
-    <script src="vendor/angular.js"></script>
-    <script src="vendor/angular-resource.js"></script>
-    <script src="vendor/angular-ui-router.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/services/lb-services.js"></script>
-    <script src="js/controllers/track.js"></script>
-  </body>
+<head>
+  <title>Code Rally Web</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/semantic.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="ui grid container">
+    <div class="sixteen wide column">
+      <h2 id="page-title" class="ui header" style="text-align: center;">Code Rally Web - An online racing platform</h2>
+    </div>
+  </div>
+  <!-- main view begins -->
+  <main ui-view></main>
+  <!-- main view ends -->
+  <script src="vendor/angular.js"></script>
+  <script src="vendor/angular-resource.js"></script>
+  <script src="vendor/angular-ui-router.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services/lb-services.js"></script>
+  <script src="js/controllers/auth.js"></script>
+  <!-- footer begins -->
+  <div class="ui inverted vertical footer very padded segment">
+      <div class="ui center aligned container">
+          <div class="ui stackable inverted divided grid">
+              <div class="eight wide column">
+                  <h4 class="ui inverted header">Get the Code!</h4>
+                  <div class="ui inverted link list">
+                      <a href="https://github.com/WASdev/sample.coderally.nodeweb" target="_blank" class="item"><i class="github icon"></i> GitHub</a>
+                  </div>
+              </div>
+              <div class="eight wide column">
+                  <h4 class="ui inverted header">Official Code Rally Docs</h4>
+                  <a href="https://www.ibm.com/developerworks/community/blogs/code-rally/entry/landing?lang=en" target="_blank">IBM Code Rally</a>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- footer ends -->
+</body>
 </html>

@@ -8,10 +8,10 @@ angular
   .config(['$stateProvider', '$urlRouterProvider', function($stateProvider,
     $urlRouterProvider) {
     $stateProvider
-      .state('all-tracks', {
-        url: '/all-tracks',
-        templateUrl: 'views/all-tracks.html',
-        controller: 'AllTracksController',
+      .state('auth', {
+        url: '/auth',
+        templateUrl: 'views/auth-user.html',
+        controller: 'AuthController',
       });
-    $urlRouterProvider.otherwise('all-tracks');
+    $urlRouterProvider.otherwise('auth');
   }]);
