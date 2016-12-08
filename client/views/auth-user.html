@@ -1,0 +1,20 @@
+<section>
+  <form name="loginForm" ng-controller="AuthController">
+      <div class="ui very padded segment">
+        <div class="ui medium header">Choose a Code Rally server:</div>
+        <select class="ui dropdown" ng-model="selectedOption" ng-change="update()" ng-options="item as item.name for item in servers"></select>
+        <div class="ui medium header">Enter custom server:</div>
+        <div class="ui action input">
+          <input ng-model="customserver" ng-disabled="isDisabledServer" type="text">
+          <button ng-click="serverConnBtn()" ng-disabled="isDisabledServer" class="ui button">Check server connection</button>
+        </div>
+        <div class="ui medium header">Enter your username to get started:</div>
+        <div class="ui action input">
+          <input type="text" name="input" ng-disabled="isDisabledAuth" ng-model="userName.text" ng-pattern="example.word">
+          <button id="authButton" ng-click="authBtn()" ng-disabled="isDisabledAuth" class="ui button">{{authbutton}}</button>
+        </div>
+        <br></br>
+        <button ng-click="loginBtn()" ng-disabled="isDisabledLogin" class="ui icon blue button">Sign in</button>
+      </div>
+  </form>
+</section>
