@@ -7,7 +7,7 @@ Node.js web app built using LoopBack framework for the Liberty-based Code Rally 
 Navigate to a location on your local file system that you wish to clone coderally-web into and enter the following command in the terminal to clone the repository:
 
 ```bash
-git clone https://github.com/WASdev/sample.coderally.nodeweb.git
+git clone https://github.com/ssh24/coderally-web.git
 ```
 
 ## 2. Install the Node modules
