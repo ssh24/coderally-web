@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
+
 <head>
   <title>Code Rally Web</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/semantic.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <div class="ui grid container">
     <div class="sixteen wide column">
@@ -20,24 +22,12 @@
   <script src="vendor/angular-ui-router.js"></script>
   <script src="js/app.js"></script>
   <script src="js/services/lb-services.js"></script>
+  <script src="js/controllers/services.js"></script>
   <script src="js/controllers/auth.js"></script>
-  <!-- footer begins -->
-  <div class="ui inverted vertical footer very padded segment">
-      <div class="ui center aligned container">
-          <div class="ui stackable inverted divided grid">
-              <div class="eight wide column">
-                  <h4 class="ui inverted header">Get the Code!</h4>
-                  <div class="ui inverted link list">
-                      <a href="https://github.com/WASdev/sample.coderally.nodeweb" target="_blank" class="item"><i class="github icon"></i> GitHub</a>
-                  </div>
-              </div>
-              <div class="eight wide column">
-                  <h4 class="ui inverted header">Official Code Rally Docs</h4>
-                  <a href="https://www.ibm.com/developerworks/community/blogs/code-rally/entry/landing?lang=en" target="_blank">IBM Code Rally</a>
-              </div>
-          </div>
-      </div>
+  <script src="js/controllers/select-track.js"></script>
+  <div id="footer">
+    <h4 align="center">&copy; 2017 IBM Liberty WebSphere Code Rally</h4>
   </div>
-  <!-- footer ends -->
 </body>
+
 </html>

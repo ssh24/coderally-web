@@ -8,10 +8,15 @@ angular
   .config(['$stateProvider', '$urlRouterProvider', function($stateProvider,
     $urlRouterProvider) {
     $stateProvider
-      .state('auth', {
-        url: '/auth',
+      .state('login', {
+        url: '/login',
         templateUrl: 'views/auth-user.html',
         controller: 'AuthController',
+      })
+      .state('select-track', {
+        url: '/select-track',
+        templateUrl: 'views/select-track.html',
+        controller: 'SelectTrackController',
       });
-    $urlRouterProvider.otherwise('auth');
+    $urlRouterProvider.otherwise('login');
   }]);

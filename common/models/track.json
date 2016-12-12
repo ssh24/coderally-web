@@ -9,6 +9,10 @@
     "tName": {
       "type": "string",
       "required": true
+    },
+    "tImage": {
+      "type": "string",
+      "required": true
     }
   },
   "validations": [],

@@ -1,0 +1,61 @@
+<section>
+  <div id="auth-seg" class="sixteen wide column" ng-controller="SelectTrackController">
+    <div class="ui segments">
+      <div>
+        <h3 style="color:white;" align="right">Logged in as: {{username.text}}</h3>
+        <input type="button" value="Sign out" style="float: right;">
+      </div>
+      <div class="ui five top attached steps">
+        <div class="active step">
+          <i class="road icon"></i>
+          <div class="content">
+            <div class="title">Pick a Track</div>
+            <div class="description">Choose your favorite track</div>
+          </div>
+        </div>
+        <div class="disabled step">
+          <i class="car icon"></i>
+          <div class="content">
+            <div class="title">Pick a Vehicle</div>
+            <div class="description">Choose your favorite vehicle</div>
+          </div>
+        </div>
+        <div class="disabled step">
+          <i class="code icon"></i>
+          <div class="content">
+            <div class="title">Code</div>
+            <div class="description">Modify the parameters</div>
+          </div>
+        </div>
+        <div class="disabled step">
+          <i class="check icon"></i>
+          <div class="content">
+            <div class="title">Confirm</div>
+            <div class="description">Confirm your choice</div>
+          </div>
+        </div>
+        <div class="disabled step">
+          <i class="checkered flag icon"></i>
+          <div class="content">
+            <div class="title">Upload &amp; Race</div>
+            <div class="description">Use a custom agent code and race!</div>
+          </div>
+        </div>
+      </div>
+      <div class="ui very padded segment">
+        <div class="ui medium header">Please select a track: </div>
+        <div class="ex1">
+          <table id="track-table" class="ui table">
+            <tbody>
+              <tr>
+                <th ng-repeat="track in tracks">
+                  <img ng-src="{{track.tImage}}" height="80" width="100" />
+                </th>
+              </tr>
+              <tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
