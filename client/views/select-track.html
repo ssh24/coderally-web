@@ -2,7 +2,7 @@
   <div id="auth-seg" class="sixteen wide column" ng-controller="SelectTrackController">
     <div class="ui segments">
       <div>
-        <h3 style="color:white;" align="right">Logged in as: {{username.text}}</h3>
+        <h3 style="color:white;" align="right">Logged in as: {{checkUsername.text}}</h3>
         <input type="button" value="Sign out" style="float: right;">
       </div>
       <div class="ui five top attached steps">
@@ -44,17 +44,20 @@
       </div>
       <div class="ui very padded segment">
         <div class="ui medium header">Please select a track: </div>
-        <div class="ex1">
+        <div>
           <table id="track-table" class="ui table">
             <tbody>
               <tr>
                 <th ng-repeat="track in tracks">
-                  <img ng-src="{{track.tImage}}" height="80" width="100" />
+                  <img ng-src="{{track.tImage}}" height="100" width="100"  style='border:1px solid #000000'/>
                 </th>
               </tr>
               <tbody>
           </table>
         </div>
+      </div>
+      <div class="ui secondary clearing segment">
+        <button ng-click="nextSelectTrack()" ng-disabled="isDisabledNextSelectTrack" class="ui right labeled icon blue right floated disabled button"><i class="right arrow icon"></i> Next</button>
       </div>
     </div>
   </div>

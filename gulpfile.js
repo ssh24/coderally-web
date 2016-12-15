@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var fs = require('fs');
 var sh = require('shelljs');
 var spawn = require('child_process').spawn;
+var argv = require('yargs').argv;
 var child;
 
 gulp.task('start:app', function(done) {
@@ -17,7 +18,11 @@ gulp.task('update:webdriver-manager', function(done) {
 });
 
 gulp.task('begin:test', function(done) {
-  sh.exec('./node_modules/protractor/bin/protractor config.js');
+  if (argv.spec)
+    sh.exec('./node_modules/protractor/bin/protractor config.js --specs ' +
+      argv.spec);
+  else
+    sh.exec('./node_modules/protractor/bin/protractor config.js');
   done();
 });
 
