@@ -6,8 +6,8 @@ angular.module('app')
   .controller('AuthController', ['$scope', '$http', '$state', 'User',
     function($scope, $http, $state, User) {
       // jquery elements
-      var myAuthBtn = angular.element(document.querySelector('#authButton'));
-      var myConnBtn = angular.element(document.querySelector('#connBtn'));
+      var authBtn = angular.element(document.querySelector('#authButton'));
+      var connBtn = angular.element(document.querySelector('#connButton'));
 
       // list of coderally servers
       $scope.servers = [{
@@ -67,10 +67,10 @@ angular.module('app')
         $scope.isDisabledLogin = true; // disable login field
         $scope.authbutton = 'Authenticate'; // set text to Authenticate
         $scope.connectionBtn = 'Check connection'; // set text to Authenticate
-        myAuthBtn.removeClass('positive'); // remove positive class if any
-        myAuthBtn.removeClass('negative'); // remove negative class if any
-        myConnBtn.removeClass('positive'); // remove positive class if any
-        myConnBtn.removeClass('negative'); // remove positive class if any
+        authBtn.removeClass('positive'); // remove positive class if any
+        authBtn.removeClass('negative'); // remove negative class if any
+        connBtn.removeClass('positive'); // remove positive class if any
+        connBtn.removeClass('negative'); // remove positive class if any
       };
 
       /** click on server connection btn **/
@@ -82,33 +82,33 @@ angular.module('app')
           url: $scope.server,
         }).then(function successCallback(response) {
           $scope.isDisabledAuth = false; // enable auth field
-          myConnBtn.addClass('positive'); // add postive class to server connection btm
+          connBtn.addClass('positive'); // add postive class to server connection btm
           $scope.connectionBtn = 'Successfully connected to server.'; // success message upon connecting to remote server
         }, function errorCallback(response) {
-          myConnBtn.addClass('negative'); // add negative class to server connection btm
+          connBtn.addClass('negative'); // add negative class to server connection btm
           $scope.connectionBtn = 'Error connecting to server.'; // error message upon connecting to remote server
         });
       };
 
       /** once authBtn is clicked process a request and get info **/
-      $scope.authBtn = function() {
+      $scope.auth = function() {
         // do a https request to the server to Authenticate user
         $http({
           method: 'GET',
           url: 'http://' + $scope.server + '/CodeRallyWeb/GetUser?user_name=' + $scope.userName.text,
         }).then(function successCallback(response) {
           if (response.data.success) {
-            myAuthBtn.addClass('positive'); // set button status to positive
+            authBtn.addClass('positive'); // set button status to positive
             $scope.authbutton = 'User successfully authenicated.'; // set button text to success
             $scope.isDisabledLogin = false; // enable login button
             // proceed onto the next page
-            $scope.loginBtn = function() {
-              $state.go('select-track');
+            $scope.login = function() {
+              $state.go('select-track'); // once logged in go to select-track page
             };
           } else {
             $scope.authbutton = 'Please enter a valid username with letters, ' +
               'numbers and underscores only.'; // set button text to error
-            myAuthBtn.addClass('negative'); // set button status to negative
+            authBtn.addClass('negative'); // set button status to negative
             $scope.isDisabledAuth = true; // disable auth field
           }
         }, function errorCallback(response) {
@@ -118,7 +118,7 @@ angular.module('app')
           else
             $scope.authbutton = 'Error authenticating the user.' +
             ' Please contact your server side developers for more info.'; // set button text to error
-          myAuthBtn.addClass('negative'); // set button status to negative
+          authBtn.addClass('negative'); // set button status to negative
           $scope.isDisabledAuth = true; // disable auth field
         });
       };

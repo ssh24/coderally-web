@@ -1,13 +1,20 @@
 'use strict';
 
+/* login spec test. to run this single test: gulp test:build --spec test/specs/login-spec.js */
+
 var chai = require('chai');
 var chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
 var expect = chai.expect;
-var Login = require('../views/login');
+
+var Login = require('../views/login-view');
+var SelectTrack = require('../views/select-track-view');
+var Forbidden = require('../views/forbidden-view');
 
 describe('Account Login Test -', function() {
-  var login;
+  this.timeout(5000);
+
+  var login, selectTrack, forbidden;
   var user = {
     username: 'testuser',
   };
@@ -29,6 +36,22 @@ describe('Account Login Test -', function() {
 
   before(function() {
     login = new Login();
+    selectTrack = new SelectTrack();
+    forbidden = new Forbidden();
+  });
+
+  // access the select track page to check forbidden
+  it('Access the select track page to check forbidden message', function() {
+    var errorMessage = '403 Forbidden';
+    selectTrack.openSelectView()
+      .then(function() {
+        expect(browser.getCurrentUrl()).to.eventually.contain('#/forbidden');
+      })
+      .then(function() {
+        expect(forbidden.getErrorMessage.call(forbidden)).to.eventually
+          .contain(errorMessage);
+      })
+      .then(forbidden.goToLoginPage.bind(forbidden));
   });
 
   // open the browser to check login page
@@ -69,11 +92,15 @@ describe('Account Login Test -', function() {
       });
   });
 
-  // complete the sign in
-  it('Complete signing in', function() {
+  // complete the sign in and sign out
+  it('Complete sign in and sign out', function() {
     login.completeLogin()
       .then(function() {
         expect(browser.getCurrentUrl()).to.eventually.contain('#/select-track');
+      })
+      .then(login.completeLogout.bind(login))
+      .then(function() {
+        expect(browser.getCurrentUrl()).to.eventually.contain('#/login');
       });
   });
 });

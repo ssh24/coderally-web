@@ -1,9 +1,9 @@
 <section>
-  <div id="auth-seg" class="sixteen wide column" ng-controller="SelectTrackController">
+  <div class="sixteen wide column" ng-controller="SelectTrackController">
     <div class="ui segments">
       <div>
-        <h3 style="color:white;" align="right">Logged in as: {{checkUsername.text}}</h3>
-        <input type="button" value="Sign out" style="float: right;">
+        <h3 id="userInfo" style="color:white;" align="right">Logged in as: {{username.text}}</h3>
+        <button ng-click="logout()" class="ui right labeled right floated button">Logout</button>
       </div>
       <div class="ui five top attached steps">
         <div class="active step">

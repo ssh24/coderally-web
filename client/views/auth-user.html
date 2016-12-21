@@ -6,15 +6,15 @@
         <div class="ui medium header">Enter custom server:</div>
         <div class="ui action input">
           <input ng-model="customserver" ng-disabled="isDisabledServer" type="text">
-          <button id="connBtn" ng-click="serverConnBtn()" ng-disabled="isDisabledServer" class="ui button">{{connectionBtn}}</button>
+          <button id="connButton" ng-click="serverConnBtn()" ng-disabled="isDisabledServer" class="ui button">{{connectionBtn}}</button>
         </div>
         <div class="ui medium header">Enter your username:</div>
         <div class="ui action input">
           <input type="text" name="input" ng-disabled="isDisabledAuth" ng-model="userName.text" ng-pattern="example.word">
-          <button id="authButton" ng-click="authBtn()" ng-disabled="isDisabledAuth" class="ui button">{{authbutton}}</button>
+          <button id="authButton" ng-click="auth()" ng-disabled="isDisabledAuth" class="ui button">{{authbutton}}</button>
         </div>
         <br></br>
-        <button ng-click="loginBtn()" ng-disabled="isDisabledLogin" class="ui icon blue button">Sign in</button>
+        <button ng-click="login()" ng-disabled="isDisabledLogin" class="ui icon blue button">Sign in</button>
       </div>
   </form>
 </section>
