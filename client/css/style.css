@@ -46,6 +46,14 @@ body {
     display: none;
 }
 
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:30px;   /* Height of the footer */
+   color: white;
+}
+
 #username-form,
 #agent-form,
 #custom-server-form {
@@ -72,6 +80,10 @@ table td {
 
 table td:hover {
     opacity: 0.6;
+}
+
+th, td {
+    padding: 15px;
 }
 
 #editor,
@@ -101,17 +113,6 @@ table td:hover {
     display: none;
 }
 
-.selected-vehicle {
-    border: 1px;
-    border-style: solid;
-    border-radius: 500px;
-    border-color: cornflowerblue;
-}
-
-.selected-track {
-    border: 5px solid cornflowerblue;
-}
-
 #log-seg .ui.list {
     max-height: 400px;
     height: 400px;
@@ -132,6 +133,8 @@ table td:hover {
     color: grey;
 }
 
-td img {
+th img {
     width: 100%;
 }
+
+.selected img {border: 5px solid cornflowerblue;}

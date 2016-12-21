@@ -34,22 +34,31 @@
 //
 //   var tracks = [{
 //     tName: 'Circuit',
+//     tImage: 'images/tracks/circuit.jpg',
 //   }, {
 //     tName: 'Desert',
+//     tImage: 'images/tracks/desert.jpg',
 //   }, {
 //     tName: 'Desk',
+//     tImage: 'images/tracks/desk.jpg',
 //   }, {
 //     tName: 'Figure8',
+//     tImage: 'images/tracks/figure8.jpg',
 //   }, {
 //     tName: 'LowEarthOrbit',
+//     tImage: 'images/tracks/lowearthorbit.jpg',
 //   }, {
 //     tName: 'Pond',
+//     tImage: 'images/tracks/pond.jpg',
 //   }, {
 //     tName: 'Sky',
+//     tImage: 'images/tracks/sky.jpg',
 //   }, {
 //     tName: 'Space',
+//     tImage: 'images/tracks/space.jpg',
 //   }, {
 //     tName: 'Water',
+//     tImage: 'images/tracks/water.jpg',
 //   }];
 //
 //   datasource.automigrate('Track', function(err) {

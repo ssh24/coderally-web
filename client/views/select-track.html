@@ -1,0 +1,67 @@
+<section>
+  <div class="sixteen wide column" ng-controller="SelectTrackController">
+    <div class="ui segments">
+      <div>
+        <h3 id="userInfo" style="color:white;" align="right">Logged in as: {{username.text}}</h3>
+        <button ng-click="logout()" class="ui right labeled right floated button">Logout</button>
+      </div>
+      <div class="ui five top attached steps">
+        <div class="active step">
+          <i class="road icon"></i>
+          <div class="content">
+            <div class="title">Pick a Track</div>
+            <div class="description">Choose your favorite track</div>
+          </div>
+        </div>
+        <div class="disabled step">
+          <i class="car icon"></i>
+          <div class="content">
+            <div class="title">Pick a Vehicle</div>
+            <div class="description">Choose your favorite vehicle</div>
+          </div>
+        </div>
+        <div class="disabled step">
+          <i class="code icon"></i>
+          <div class="content">
+            <div class="title">Code</div>
+            <div class="description">Modify the parameters</div>
+          </div>
+        </div>
+        <div class="disabled step">
+          <i class="check icon"></i>
+          <div class="content">
+            <div class="title">Confirm</div>
+            <div class="description">Confirm your choice</div>
+          </div>
+        </div>
+        <div class="disabled step">
+          <i class="checkered flag icon"></i>
+          <div class="content">
+            <div class="title">Upload &amp; Race</div>
+            <div class="description">Use a custom agent code and race!</div>
+          </div>
+        </div>
+      </div>
+      <div class="ui very padded segment">
+        <div class="ui medium header">Please select a track: </div>
+        <div id="track-table">
+          <table class="ui table">
+            <tbody>
+              <tr>
+                <th ng-repeat="track in tracks">
+                  <div ng-click="toggleTracks(track)" ng-class="{selected: track === selected}">
+                      <label>{{track.tName}}</label>
+                      <img ng-src="{{track.tImage}}" height="100" width="100"/>
+                  </div>
+                </th>
+              </tr>
+              <tbody>
+          </table>
+        </div>
+      </div>
+      <div class="ui secondary clearing segment">
+        <button ng-click="nextSelectTrack()" ng-disabled="isDisabledNextSelectTrack" class="ui right labeled icon blue right floated button"><i class="right arrow icon"></i> Next</button>
+      </div>
+    </div>
+  </div>
+</section>

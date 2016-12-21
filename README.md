@@ -10,7 +10,7 @@ Navigate to a location on your local file system that you wish to clone coderall
 git clone https://github.com/ssh24/coderally-web.git
 ```
 
-## 2. Install the Node modules
+## 2. Install the Node Modules
 
 If you would like to run this application locally follow the steps in this section. To deploy to Bluemix, you can skip this step and head over to step 3.
 

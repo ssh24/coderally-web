@@ -15,15 +15,15 @@
     "RoleMapping": {},
     "Role": {},
     "Track": {
-      "1": "{\"tName\":\"Circuit\",\"id\":1}",
-      "2": "{\"tName\":\"Desert\",\"id\":2}",
-      "3": "{\"tName\":\"Desk\",\"id\":3}",
-      "4": "{\"tName\":\"Figure8\",\"id\":4}",
-      "5": "{\"tName\":\"LowEarthOrbit\",\"id\":5}",
-      "6": "{\"tName\":\"Pond\",\"id\":6}",
-      "7": "{\"tName\":\"Sky\",\"id\":7}",
-      "8": "{\"tName\":\"Space\",\"id\":8}",
-      "9": "{\"tName\":\"Water\",\"id\":9}"
+      "1": "{\"tName\":\"Circuit\",\"tImage\":\"images/tracks/circuit.jpg\",\"id\":1}",
+      "2": "{\"tName\":\"Desert\",\"tImage\":\"images/tracks/desert.jpg\",\"id\":2}",
+      "3": "{\"tName\":\"Desk\",\"tImage\":\"images/tracks/desk.jpg\",\"id\":3}",
+      "4": "{\"tName\":\"Figure8\",\"tImage\":\"images/tracks/figure8.jpg\",\"id\":4}",
+      "5": "{\"tName\":\"LowEarthOrbit\",\"tImage\":\"images/tracks/lowearthorbit.jpg\",\"id\":5}",
+      "6": "{\"tName\":\"Pond\",\"tImage\":\"images/tracks/pond.jpg\",\"id\":6}",
+      "7": "{\"tName\":\"Sky\",\"tImage\":\"images/tracks/sky.jpg\",\"id\":7}",
+      "8": "{\"tName\":\"Space\",\"tImage\":\"images/tracks/space.jpg\",\"id\":8}",
+      "9": "{\"tName\":\"Water\",\"tImage\":\"images/tracks/water.jpg\",\"id\":9}"
     },
     "Vehicle": {
       "1": "{\"vName\":\"blue_orb\",\"vObject\":\"./game-assets/tracks/circuit/vehicleInfo/blue_orbObject.json\",\"vInfo\":\"./game-assets/tracks/circuit/vehicleInfo/blue_orb.json\",\"vImage\":\"vehicles/blue_orb.png\",\"trackId\":1,\"id\":1}",

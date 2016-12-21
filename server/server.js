@@ -2,8 +2,6 @@
 
 var loopback = require('loopback');
 var boot = require('loopback-boot');
-var opener = require('opener');
-
 var app = module.exports = loopback();
 
 app.start = function() {
@@ -12,7 +10,6 @@ app.start = function() {
     app.emit('started');
     var baseUrl = app.get('url').replace(/\/$/, '');
     console.log('App listening on: %s', baseUrl);
-    opener(baseUrl);
   });
 };
 
