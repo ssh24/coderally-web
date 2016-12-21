@@ -44,12 +44,15 @@
       </div>
       <div class="ui very padded segment">
         <div class="ui medium header">Please select a track: </div>
-        <div>
-          <table id="track-table" class="ui table">
+        <div id="track-table">
+          <table class="ui table">
             <tbody>
               <tr>
                 <th ng-repeat="track in tracks">
-                  <img ng-src="{{track.tImage}}" height="100" width="100"  style='border:1px solid #000000'/>
+                  <div ng-click="toggleTracks(track)" ng-class="{selected: track === selected}">
+                      <label>{{track.tName}}</label>
+                      <img ng-src="{{track.tImage}}" height="100" width="100"/>
+                  </div>
                 </th>
               </tr>
               <tbody>
@@ -57,7 +60,7 @@
         </div>
       </div>
       <div class="ui secondary clearing segment">
-        <button ng-click="nextSelectTrack()" ng-disabled="isDisabledNextSelectTrack" class="ui right labeled icon blue right floated disabled button"><i class="right arrow icon"></i> Next</button>
+        <button ng-click="nextSelectTrack()" ng-disabled="isDisabledNextSelectTrack" class="ui right labeled icon blue right floated button"><i class="right arrow icon"></i> Next</button>
       </div>
     </div>
   </div>

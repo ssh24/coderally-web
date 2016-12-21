@@ -7,9 +7,9 @@ var chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
 var expect = chai.expect;
 
-var Login = require('../views/login-view');
-var SelectTrack = require('../views/select-track-view');
-var Forbidden = require('../views/forbidden-view');
+var Login = require('../../views/login-view');
+var SelectTrack = require('../../views/select-track-view');
+var Forbidden = require('../../views/forbidden-view');
 
 describe('Account Login Test -', function() {
   this.timeout(5000);

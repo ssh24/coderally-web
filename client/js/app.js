@@ -21,6 +21,10 @@ angular
         url: '/select-track',
         templateUrl: 'views/select-track.html',
         controller: 'SelectTrackController',
+      }).state('select-vehicle', {
+        url: '/select-vehicle',
+        templateUrl: 'views/select-vehicle.html',
+        controller: 'SelectVehicleController',
       });
     $urlRouterProvider.otherwise('login');
   }]);

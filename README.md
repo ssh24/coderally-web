@@ -43,7 +43,7 @@ Congratulations, your app is now published to Bluemix. Run your application, by 
 
 Supervisor: Thomas Banks
 
-Developers: Sakib Hasan
+Developers: Sakib Hasan, Laven Sathiyanathan
 
 Quality Assurance Tester: Ivy Ho, Sakib Hasan, Laven Sathiyanathan
 

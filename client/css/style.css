@@ -46,10 +46,6 @@ body {
     display: none;
 }
 
-div.ex1 {
-    width: 100px;
-}
-
 #footer {
    position:absolute;
    bottom:0;
@@ -117,17 +113,6 @@ th, td {
     display: none;
 }
 
-.selected-vehicle {
-    border: 1px;
-    border-style: solid;
-    border-radius: 500px;
-    border-color: cornflowerblue;
-}
-
-.selected-track {
-    border: 5px solid cornflowerblue;
-}
-
 #log-seg .ui.list {
     max-height: 400px;
     height: 400px;
@@ -148,6 +133,8 @@ th, td {
     color: grey;
 }
 
-td img {
+th img {
     width: 100%;
 }
+
+.selected img {border: 5px solid cornflowerblue;}
