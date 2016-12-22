@@ -3,43 +3,43 @@
       "vName": "buggy_black",
       "vObject": "./game-assets/tracks/desert/vehicleInfo/buggy_blackObject.json",
       "vInfo": "./game-assets/tracks/desert/vehicleInfo/buggy_black.json",
-      "vImage": "vehicles/buggy_black.png",
+      "vImage": "images/vehicles/buggy_black.png",
       "trackId": 2
     }, {
       "vName": "buggy_blue",
       "vObject": "./game-assets/tracks/desert/vehicleInfo/buggy_blueObject.json",
       "vInfo": "./game-assets/tracks/desert/vehicleInfo/buggy_blue.json",
-      "vImage": "vehicles/buggy_blue.png",
+      "vImage": "images/vehicles/buggy_blue.png",
       "trackId": 2
     }, {
       "vName": "buggy_green",
       "vObject": "./game-assets/tracks/desert/vehicleInfo/buggy_greenObject.json",
       "vInfo": "./game-assets/tracks/desert/vehicleInfo/buggy_green.json",
-      "vImage": "vehicles/buggy_green.png",
+      "vImage": "images/vehicles/buggy_green.png",
       "trackId": 2
     }, {
       "vName": "buggy_orange",
       "vObject": "./game-assets/tracks/desert/vehicleInfo/buggy_orangeObject.json",
       "vInfo": "./game-assets/tracks/desert/vehicleInfo/buggy_orange.json",
-      "vImage": "vehicles/buggy_orange.png",
+      "vImage": "images/vehicles/buggy_orange.png",
       "trackId": 2
     }, {
       "vName": "buggy_pink",
       "vObject": "./game-assets/tracks/desert/vehicleInfo/buggy_pinkObject.json",
       "vInfo": "./game-assets/tracks/desert/vehicleInfo/buggy_pink.json",
-      "vImage": "vehicles/buggy_pink.png",
+      "vImage": "images/vehicles/buggy_pink.png",
       "trackId": 2
     }, {
       "vName": "buggy_purple",
       "vObject": "./game-assets/tracks/desert/vehicleInfo/buggy_purpleObject.json",
       "vInfo": "./game-assets/tracks/desert/vehicleInfo/buggy_purple.json",
-      "vImage": "vehicles/buggy_purple.png",
+      "vImage": "images/vehicles/buggy_purple.png",
       "trackId": 2
     }, {
       "vName": "buggy_teal",
       "vObject": "./game-assets/tracks/desert/vehicleInfo/buggy_tealObject.json",
       "vInfo": "./game-assets/tracks/desert/vehicleInfo/buggy_teal.json",
-      "vImage": "vehicles/buggy_teal.png",
+      "vImage": "images/vehicles/buggy_teal.png",
       "trackId": 2
     }]
   }
