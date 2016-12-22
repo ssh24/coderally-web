@@ -10,40 +10,26 @@ var expect = chai.expect;
 var Login = require('../../views/login-view');
 var SelectTrack = require('../../views/select-track-view');
 var Forbidden = require('../../views/forbidden-view');
+var Utils = require('../../utils/shared-utils');
+var config = require('../../config.json');
 
 describe('Account Login Test -', function() {
-  this.timeout(5000);
+  this.timeout(10000);
 
-  var login, selectTrack, forbidden;
-  var user = {
-    username: 'testuser',
-  };
-  var servers = [{
-    name: 'North American Contest Server',
-  }, {
-    name: 'Brazilian Contest Server',
-  }, {
-    name: 'Indian Contest Server',
-  }, {
-    name: 'Chinese Regional Server',
-  }, {
-    name: 'European Regional Server',
-  }, {
-    name: 'Worldwide Practise Server',
-  }, {
-    name: 'Use Custom Server',
-  }];
+  var login, selectTrack, forbidden, utils;
 
   before(function() {
     login = new Login();
     selectTrack = new SelectTrack();
     forbidden = new Forbidden();
+    utils = new Utils();
   });
 
   // access the select track page to check forbidden
   it('Access the select track page to check forbidden message', function() {
     var errorMessage = '403 Forbidden';
-    selectTrack.openSelectView()
+
+    utils.openView('/#/select-track')
       .then(function() {
         expect(browser.getCurrentUrl()).to.eventually.contain('#/forbidden');
       })
@@ -56,28 +42,30 @@ describe('Account Login Test -', function() {
 
   // open the browser to check login page
   it('Open the browser to check login page', function() {
-    login.openLoginView()
+    utils.openView('/')
       .then(function() {
         expect(browser.getCurrentUrl()).to.eventually.contain('#/login');
+        var x = expect(utils.getButtonEnableStatus.call(utils,
+          login.loginBtn)).to.eventually.be.false;
       });
   });
 
   // get list of all the active servers
   it('Get list of active servers', function() {
-    for (var i = 0; i < servers.length; i++) {
+    for (var i = 0; i < config.info.servers.length; i++) {
       expect(login.getAllServers.call(login)).to
-        .eventually.contain(servers[i].name);
+        .eventually.contain(config.info.servers[i].name);
     }
   });
 
   // select a server to login against
   it('Select a server', function() {
     expect(login.getSelectedServer.call(login))
-      .to.eventually.contain(servers[0].name)
-      .then(login.selectServer.bind(login, servers[5].name))
+      .to.eventually.contain(config.info.servers[0].name)
+      .then(login.selectServer.bind(login, config.info.servers[5].name))
       .then(function() {
         expect(login.getSelectedServer.call(login))
-          .to.eventually.contain(servers[5].name);
+          .to.eventually.contain(config.info.servers[5].name);
       });
   });
 
@@ -85,7 +73,7 @@ describe('Account Login Test -', function() {
   it('Authenticate a user', function() {
     expect(login.checkAuthButtonTxt.call(login)).to.eventually
       .equal('Authenticate')
-      .then(login.authUser.bind(login, user.username))
+      .then(login.authUser.bind(login, config.login.username))
       .then(function() {
         expect(login.checkAuthButtonTxt.call(login)).to.eventually
           .equal('User successfully authenicated.');

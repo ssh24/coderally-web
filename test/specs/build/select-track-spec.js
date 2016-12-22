@@ -8,57 +8,71 @@ chai.use(chaiAsPromised);
 var expect = chai.expect;
 var Login = require('../../views/login-view');
 var SelectTrack = require('../../views/select-track-view');
+var config = require('../../config');
+var Utils = require('../../utils/shared-utils');
 
 describe('Select Track Test -', function() {
-  this.timeout(5000);
+  this.timeout(10000);
 
-  var login, selectTrack;
-  var options = {
-    server: 'Worldwide Practise Server',
-    username: 'testuser',
-  };
-  var tracks = ['Desert', 'Desk', 'Figure8',
-    'LowEarthOrbit',
-    'Pond',
-    'Sky',
-    'Space',
-    'Water',
-  ];
+  var login, selectTrack, utils;
 
   before(function() {
     login = new Login();
     selectTrack = new SelectTrack();
+    utils = new Utils();
   });
 
-  // login and check for select track page
-  it('Check for select track page after logging in', function() {
-    login.doFullLogin(options)
+  // login and check for select track page and logout
+  it('Login, check for select track page and logout', function() {
+    login.doFullLogin(config.login)
       .then(function() {
         expect(login.getLoggedInUser.call(login)).to
-          .eventually.contain(options.username);
+          .eventually.contain(config.login.username);
         expect(browser.getCurrentUrl()).to.eventually.contain('#/select-track');
+      })
+      .then(login.completeLogout.bind(login))
+      .then(function() {
+        expect(browser.getCurrentUrl()).to.eventually
+          .contain('#/login');
+      });
+  });
+
+  // login and proceed to select track page
+  it('Login and proceed to select track page', function() {
+    login.doFullLogin(config.login)
+      .then(function() {
+        expect(login.getLoggedInUser.call(login)).to
+          .eventually.contain(config.login.username);
+        expect(browser.getCurrentUrl()).to.eventually.contain('#/select-track');
+        var x = expect(utils.getButtonEnableStatus.call(utils,
+          selectTrack.tracks.continue)).to.eventually.be.false;
       });
   });
 
   // get all tracks
   it('Get list of tracks', function() {
-    for (var i = 0; i < tracks.length; i++) {
+    for (var i = 0; i < config.info.tracks.length; i++) {
       expect(selectTrack.getTrackList.call(selectTrack)).to.
-      eventually.contain(tracks[i]);
+      eventually.contain(config.info.tracks[i].name);
     }
   });
 
   // select a track and proceed
-  it('Select a track and proceed', function() {
-    selectTrack.selectATrack(tracks[1])
+  it('Select a track, proceed to select vehicle page and logout', function() {
+    selectTrack.selectATrack(config.info.tracks[1].name)
       .then(function() {
         expect(selectTrack.getSelectedTrack.call(selectTrack)).to
-          .equal(tracks[1]);
+          .equal(config.info.tracks[1].name);
       })
       .then(selectTrack.goToSelectVehicle.bind(selectTrack))
       .then(function() {
         expect(browser.getCurrentUrl()).to.eventually
           .contain('#/select-vehicle');
+      })
+      .then(login.completeLogout.bind(login))
+      .then(function() {
+        expect(browser.getCurrentUrl()).to.eventually
+          .contain('#/login');
       });
   });
 });

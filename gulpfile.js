@@ -22,7 +22,7 @@ gulp.task('test:build', ['start:app', 'update:webdriver-manager'],
   function(done) {
     if (argv.spec)
       sh.exec('./node_modules/protractor/bin/protractor config.js --specs ' +
-        'test/specs/build/' + argv.spec);
+        argv.spec);
     else {
       var files = fs.readdirSync(path.resolve(__dirname, 'test/specs/build'));
       var specs = '';
@@ -30,7 +30,6 @@ gulp.task('test:build', ['start:app', 'update:webdriver-manager'],
         if (files[i].indexOf('-spec.js') > -1)
           specs = specs + 'test/specs/build/' + files[i] + ',';
       }
-      console.log(specs.substring(0, specs.length - 1));
       sh.exec('./node_modules/protractor/bin/protractor config.js --specs ' +
         specs.substring(0, specs.length - 1));
     }
@@ -52,7 +51,7 @@ gulp.task('test:e2e', ['start:app', 'update:webdriver-manager'],
 
 gulp.task('default', function(done) {
   console.log('To run a full e2e test, please run: ' +
-    '`gulp test:e2e`');
+    '`./node_modules/gulp/bin/gulp.js test:e2e`');
   console.log('To run suite of build tests, please run: ' +
-    '`gulp test:build`');
+    '`./node_modules/gulp/bin/gulp.js test:build`');
 });

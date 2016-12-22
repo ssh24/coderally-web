@@ -51,8 +51,8 @@ angular.module('app')
         $scope.nextSelectVehicle = function() {
           if ($scope.username.text == undefined || $scope.username.text == '')
             $state.go('forbidden'); // go to forbidden page
-          // else
-          //   $state.go('modify-code');
+          else
+            $state.go('modify-code');
         };
       }
     },

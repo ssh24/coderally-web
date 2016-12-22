@@ -43,15 +43,16 @@
         </div>
       </div>
       <div class="ui very padded segment">
-        <h3 style="color:blue">Track chosen: {{chosenTrack.chosen.tName}}</h3>
+        <h3 id="chosen-track" style="color:blue">Track chosen: {{chosenTrack.chosen.tName}}</h3>
         <h3>Please select a vehicle: </h3>
-        <div id="vehicle-table">
+        <div>
           <table class="ui table">
             <tbody>
               <tr>
                 <th ng-repeat="vehicle in vehicles">
                   <div ng-click="toggleVehicles(vehicle)" ng-class="{selected: vehicle === selected}">
-                      <img ng-src="{{vehicle.vImage}}" height="100" width="=100"/>
+                    <img ng-src="{{vehicle.vImage}}" height="100" width="=100" />
+                    <p>{{(vehicle.vName.charAt(0).toUpperCase() + vehicle.vName.slice(1)).split('_')[0]}} {{(vehicle.vName.charAt(0).toUpperCase() + vehicle.vName.slice(1)).split('_')[1]}}</p>
                   </div>
                 </th>
               </tr>

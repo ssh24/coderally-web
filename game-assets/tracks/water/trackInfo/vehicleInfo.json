@@ -1,42 +1,42 @@
   {
     "vehicles": [{
-      "vName": "boat_black",
+      "vName": "black_boat",
       "vObject": "./game-assets/tracks/water/vehicleInfo/boat_blackObject.json",
       "vInfo": "./game-assets/tracks/water/vehicleInfo/boat_black.json",
       "vImage": "images/vehicles/boat_black.png",
       "trackId": 9
     }, {
-      "vName": "boat_blue",
+      "vName": "blue_boat",
       "vObject": "./game-assets/tracks/water/vehicleInfo/boat_blueObject.json",
       "vInfo": "./game-assets/tracks/water/vehicleInfo/boat_blue.json",
       "vImage": "images/vehicles/boat_blue.png",
       "trackId": 9
     }, {
-      "vName": "boat_green",
+      "vName": "green_boat",
       "vObject": "./game-assets/tracks/water/vehicleInfo/boat_greenObject.json",
       "vInfo": "./game-assets/tracks/water/vehicleInfo/boat_green.json",
       "vImage": "images/vehicles/boat_green.png",
       "trackId": 9
     }, {
-      "vName": "boat_orange",
+      "vName": "orange_boat",
       "vObject": "./game-assets/tracks/water/vehicleInfo/boat_orangeObject.json",
       "vInfo": "./game-assets/tracks/water/vehicleInfo/boat_orange.json",
       "vImage": "images/vehicles/boat_orange.png",
       "trackId": 9
     }, {
-      "vName": "boat_purple",
+      "vName": "purple_boat",
       "vObject": "./game-assets/tracks/water/vehicleInfo/boat_purpleObject.json",
       "vInfo": "./game-assets/tracks/water/vehicleInfo/boat_purple.json",
       "vImage": "images/vehicles/boat_purple.png",
       "trackId": 9
     }, {
-      "vName": "boat_white",
+      "vName": "white_boat",
       "vObject": "./game-assets/tracks/water/vehicleInfo/boat_whiteObject.json",
       "vInfo": "./game-assets/tracks/water/vehicleInfo/boat_white.json",
       "vImage": "images/vehicles/boat_white.png",
       "trackId": 9
     }, {
-      "vName": "boat_yellow",
+      "vName": "yellow_boat",
       "vObject": "./game-assets/tracks/water/vehicleInfo/boat_yellowObject.json",
       "vInfo": "./game-assets/tracks/water/vehicleInfo/boat_yellow.json",
       "vImage": "images/vehicles/boat_yellow.png",

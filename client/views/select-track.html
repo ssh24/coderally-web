@@ -50,7 +50,7 @@
               <tr>
                 <th ng-repeat="track in tracks">
                   <div ng-click="toggleTracks(track)" ng-class="{selected: track === selected}">
-                      <label>{{track.tName}}</label>
+                      <p>{{track.tName}}</p>
                       <img ng-src="{{track.tImage}}" height="100" width="100"/>
                   </div>
                 </th>

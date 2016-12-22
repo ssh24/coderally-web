@@ -12,7 +12,7 @@
       "vImage": "images/vehicles/blue_ladybug.png",
       "trackId": 6
     }, {
-      "vName": "bumblebee",
+      "vName": "brown_bumblebee",
       "vObject": "./game-assets/tracks/pond/vehicleInfo/bumblebeeObject.json",
       "vInfo": "./game-assets/tracks/pond/vehicleInfo/bumblebee.json",
       "vImage": "images/vehicles/bumblebee.png",

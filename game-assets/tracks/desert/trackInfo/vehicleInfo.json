@@ -1,42 +1,42 @@
   {
     "vehicles": [{
-      "vName": "buggy_black",
+      "vName": "black_buggy",
       "vObject": "./game-assets/tracks/desert/vehicleInfo/buggy_blackObject.json",
       "vInfo": "./game-assets/tracks/desert/vehicleInfo/buggy_black.json",
       "vImage": "images/vehicles/buggy_black.png",
       "trackId": 2
     }, {
-      "vName": "buggy_blue",
+      "vName": "blue_buggy",
       "vObject": "./game-assets/tracks/desert/vehicleInfo/buggy_blueObject.json",
       "vInfo": "./game-assets/tracks/desert/vehicleInfo/buggy_blue.json",
       "vImage": "images/vehicles/buggy_blue.png",
       "trackId": 2
     }, {
-      "vName": "buggy_green",
+      "vName": "green_buggy",
       "vObject": "./game-assets/tracks/desert/vehicleInfo/buggy_greenObject.json",
       "vInfo": "./game-assets/tracks/desert/vehicleInfo/buggy_green.json",
       "vImage": "images/vehicles/buggy_green.png",
       "trackId": 2
     }, {
-      "vName": "buggy_orange",
+      "vName": "orange_buggy",
       "vObject": "./game-assets/tracks/desert/vehicleInfo/buggy_orangeObject.json",
       "vInfo": "./game-assets/tracks/desert/vehicleInfo/buggy_orange.json",
       "vImage": "images/vehicles/buggy_orange.png",
       "trackId": 2
     }, {
-      "vName": "buggy_pink",
+      "vName": "pink_buggy",
       "vObject": "./game-assets/tracks/desert/vehicleInfo/buggy_pinkObject.json",
       "vInfo": "./game-assets/tracks/desert/vehicleInfo/buggy_pink.json",
       "vImage": "images/vehicles/buggy_pink.png",
       "trackId": 2
     }, {
-      "vName": "buggy_purple",
+      "vName": "purple_buggy",
       "vObject": "./game-assets/tracks/desert/vehicleInfo/buggy_purpleObject.json",
       "vInfo": "./game-assets/tracks/desert/vehicleInfo/buggy_purple.json",
       "vImage": "images/vehicles/buggy_purple.png",
       "trackId": 2
     }, {
-      "vName": "buggy_teal",
+      "vName": "teal_buggy",
       "vObject": "./game-assets/tracks/desert/vehicleInfo/buggy_tealObject.json",
       "vInfo": "./game-assets/tracks/desert/vehicleInfo/buggy_teal.json",
       "vImage": "images/vehicles/buggy_teal.png",

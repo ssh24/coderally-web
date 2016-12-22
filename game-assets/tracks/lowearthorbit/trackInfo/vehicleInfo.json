@@ -1,42 +1,42 @@
   {
     "vehicles": [{
-      "vName": "orbiter_blue",
+      "vName": "blue_orbiter",
       "vObject": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_blueObject.json",
       "vInfo": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_blue.json",
       "vImage": "images/vehicles/orbiter_blue.png",
       "trackId": 5
     }, {
-      "vName": "orbiter_brown",
+      "vName": "brown_orbitern",
       "vObject": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_brownObject.json",
       "vInfo": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_brown.json",
       "vImage": "images/vehicles/orbiter_brown.png",
       "trackId": 5
     }, {
-      "vName": "orbiter_green",
+      "vName": "green_orbiter",
       "vObject": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_greenObject.json",
       "vInfo": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_green.json",
       "vImage": "images/vehicles/orbiter_green.png",
       "trackId": 5
     }, {
-      "vName": "orbiter_orange",
+      "vName": "orange_orbiter",
       "vObject": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_orange.json",
       "vInfo": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_orange.json",
       "vImage": "images/vehicles/orbiter_orange.png",
       "trackId": 5
     }, {
-      "vName": "orbiter_pink",
+      "vName": "pink_orbiter",
       "vObject": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_pinkObject.json",
       "vInfo": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_pink.json",
       "vImage": "images/vehicles/orbiter_pink.png",
       "trackId": 5
     }, {
-      "vName": "orbiter_purple",
+      "vName": "purple_orbiter",
       "vObject": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_purpleObject.json",
       "vInfo": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_purple.json",
       "vImage": "images/vehicles/orbiter_purple.png",
       "trackId": 5
     }, {
-      "vName": "orbiter_white",
+      "vName": "white_orbiter",
       "vObject": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_whiteObject.json",
       "vInfo": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_white.json",
       "vImage": "images/vehicles/orbiter_white.png",

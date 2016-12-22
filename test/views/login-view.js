@@ -2,7 +2,7 @@
 
 /* login views file */
 
-var UTILS = require('../utils/shared-utils');
+var Utils = require('../utils/shared-utils');
 
 function Login() {
   // utils needed for this module
@@ -22,14 +22,9 @@ function Login() {
   this.loginBtn = by.css('[ng-click="login()"]');
   this.logoutBtn = by.css('[ng-click="logout()"]');
 
-  this.utils = new UTILS();
+  this.utils = new Utils();
   this.timeout = 1000;
 }
-
-// open login view
-Login.prototype.openLoginView = function() {
-  return browser.get('/');
-};
 
 // enter username
 Login.prototype.authUser = function(username) {
@@ -76,7 +71,7 @@ Login.prototype.doFullLogin = function(options) {
   var server = options.server;
   var username = options.username;
 
-  return this.openLoginView()
+  return this.utils.openView('/')
     .then(this.selectServer.bind(this, server))
     .then(this.authUser.bind(this, username))
     .then(this.utils.waitForElementEnabled.bind(this.utils, this.loginBtn,
