@@ -1,0 +1,237 @@
+{
+  "login": {
+    "server": "Worldwide Practise Server",
+    "username": "testuser",
+    "track": {
+      "name": "Desert"
+    }
+  },
+  "info": {
+    "servers": [{
+      "name": "North American Contest Server"
+    }, {
+      "name": "Brazilian Contest Server"
+    }, {
+      "name": "Indian Contest Server"
+    }, {
+      "name": "Chinese Regional Server"
+    }, {
+      "name": "European Regional Server"
+    }, {
+      "name": "Worldwide Practise Server"
+    }, {
+      "name": "Use Custom Server"
+    }],
+    "tracks": [{
+      "name": "Circuit",
+      "vehicles": [{
+        "name": "Blue orb",
+        "trackId": 1
+      }, {
+        "name": "Green orb",
+        "trackId": 1
+      }, {
+        "name": "Red orb",
+        "trackId": 1
+      }, {
+        "name": "Orange orb",
+        "trackId": 1
+      }, {
+        "name": "Turqousie orb",
+        "trackId": 1
+      }, {
+        "name": "Violet orb",
+        "trackId": 1
+      }, {
+        "name": "Yellow orb",
+        "trackId": 1
+      }]
+    }, {
+      "name": "Desert",
+      "vehicles": [{
+        "name": "Black buggy",
+        "trackId": 2
+      }, {
+        "name": "Blue buggy",
+        "trackId": 2
+      }, {
+        "name": "Green buggy",
+        "trackId": 2
+      }, {
+        "name": "Orange buggy",
+        "trackId": 2
+      }, {
+        "name": "Pink buggy",
+        "trackId": 2
+      }, {
+        "name": "Purple buggy",
+        "trackId": 2
+      }, {
+        "name": "Teal buggy",
+        "trackId": 2
+      }]
+    }, {
+      "name": "Desk",
+      "vehicles": [{
+        "name": "Blue car",
+        "trackId": 3
+      }, {
+        "name": "Grey car",
+        "trackId": 3
+      }, {
+        "name": "Orange car",
+        "trackId": 3
+      }, {
+        "name": "Purple car",
+        "trackId": 3
+      }, {
+        "name": "Red car",
+        "trackId": 3
+      }, {
+        "name": "Teal car",
+        "trackId": 3
+      }, {
+        "name": "Yellow car",
+        "trackId": 3
+      }]
+    }, {
+      "name": "Figure8",
+      "vehicles": [{
+        "name": "Blue car",
+        "trackId": 4
+      }, {
+        "name": "Grey car",
+        "trackId": 4
+      }, {
+        "name": "Orange car",
+        "trackId": 4
+      }, {
+        "name": "Purple car",
+        "trackId": 4
+      }, {
+        "name": "Red car",
+        "trackId": 4
+      }, {
+        "name": "Teal car",
+        "trackId": 4
+      }, {
+        "name": "Yellow car",
+        "trackId": 4
+      }]
+    }, {
+      "name": "LowEarthOrbit",
+      "vehicles": [{
+        "name": "Blue orbiter",
+        "trackId": 5
+      }, {
+        "name": "Brown orbiter",
+        "trackId": 5
+      }, {
+        "name": "Green orbiter",
+        "trackId": 5
+      }, {
+        "name": "Orange orbiter",
+        "trackId": 5
+      }, {
+        "name": "Pink orbiter",
+        "trackId": 5
+      }, {
+        "name": "Purple orbiter",
+        "trackId": 5
+      }, {
+        "name": "White orbiter",
+        "trackId": 5
+      }]
+    }, {
+      "name": "Pond",
+      "vehicles": [{
+        "name": "blue_dragonfly",
+        "trackId": 6
+      }, {
+        "name": "Blue ladybug",
+        "trackId": 6
+      }, {
+        "name": "Brown bumblebee",
+        "trackId": 6
+      }, {
+        "name": "Green dragonfly",
+        "trackId": 6
+      }, {
+        "name": "Monarch butterfly",
+        "trackId": 6
+      }, {
+        "name": "Red ladybug",
+        "trackId": 6
+      }, {
+        "name": "Yellow ladybug",
+        "trackId": 6
+      }]
+    }, {
+      "name": "Sky",
+      "vehicles": [{
+        "name": "Blue plane",
+        "trackId": 7
+      }, {
+        "name": "Green plane",
+        "trackId": 7
+      }, {
+        "name": "Orange plane",
+        "trackId": 7
+      }, {
+        "name": "Red plane",
+        "trackId": 7
+      }, {
+        "name": "Teal plane",
+        "trackId": 7
+      }, {
+        "name": "Yellow plane",
+        "trackId": 7
+      }]
+    }, {
+      "name": "Space",
+      "vehicles": [{
+        "name": "Blue spaceship",
+        "trackId": 8
+      }, {
+        "name": "Green spaceship",
+        "trackId": 8
+      }, {
+        "name": "Red spaceship",
+        "trackId": 8
+      }, {
+        "name": "Orange spaceship",
+        "trackId": 8
+      }, {
+        "name": "Teal spaceship",
+        "trackId": 8
+      }, {
+        "name": "Triangular spaceship",
+        "trackId": 8
+      }]
+    }, {
+      "name": "Water",
+      "vehicles": [{
+        "name": "Black boat",
+        "trackId": 9
+      }, {
+        "name": "Blue boat",
+        "trackId": 9
+      }, {
+        "name": "Green boat",
+        "trackId": 9
+      }, {
+        "name": "Orange boat",
+        "trackId": 9
+      }, {
+        "name": "Purple boat",
+        "trackId": 9
+      }, {
+        "name": "White boat",
+        "trackId": 9
+      }, {
+        "name": "Yellow boat",
+        "trackId": 9
+      }]
+    }]
+  }
+}

@@ -61,30 +61,19 @@ body {
     margin-bottom: 20px;
 }
 
-table td {
-    padding: 35px;
-    margin-bottom: 200px;
+table th {
+    padding: 20px;
 }
 
 table {
     border: none !important;
 }
 
-table td {
-    opacity: 1;
-    transition: opacity .8s ease-out;
-    -moz-transition: opacity .8s ease-out;
-    -webkit-transition: opacity .8s ease-out;
-    -o-transition: opacity .8s ease-out;
+#track-table th img {
+    width: 100%;
 }
 
-table td:hover {
-    opacity: 0.6;
-}
-
-th, td {
-    padding: 15px;
-}
+.selected img {border: 5px solid cornflowerblue;}
 
 #editor,
 #editor_result {
@@ -132,9 +121,3 @@ th, td {
 .road.icon {
     color: grey;
 }
-
-th img {
-    width: 100%;
-}
-
-.selected img {border: 5px solid cornflowerblue;}

@@ -2,29 +2,31 @@
 
 /* select track views file */
 
-function SelecTrack() {
+var Login = require('../views/login-view');
+var Utils = require('../utils/shared-utils');
+
+function SelectTrack() {
+  // utils needed for this module
   this.tracks = {};
   this.tracks.allTrackInfo = by.repeater('track in tracks');
   this.tracks.select = by.css('[ng-click="toggleTracks(track)"]');
   this.tracks.continue = by.css('[ng-click="nextSelectTrack()"]');
   this.tracks.selected = '';
+
+  this.login = new Login();
+  this.utils = new Utils();
 }
 
-// open login view
-SelecTrack.prototype.openSelectView = function() {
-  return browser.get('/#/select-track');
-};
-
 // get lists of tracks
-SelecTrack.prototype.getTrackList = function() {
+SelectTrack.prototype.getTrackList = function() {
   return element.all(this.tracks.allTrackInfo).getText();
 };
 
 // select a track
-SelecTrack.prototype.selectATrack = function(track) {
+SelectTrack.prototype.selectATrack = function(track) {
   var self = this;
 
-  return element.all(this.tracks.allTrackInfo).getText()
+  return this.getTrackList()
     .then(function(txt) {
       for (var i = 0; i < txt.length; i++) {
         if (txt[i].indexOf(track) > -1) {
@@ -36,13 +38,22 @@ SelecTrack.prototype.selectATrack = function(track) {
 };
 
 // get selected track
-SelecTrack.prototype.getSelectedTrack = function() {
+SelectTrack.prototype.getSelectedTrack = function() {
   return this.tracks.selected;
 };
 
 // continue to select vehicle
-SelecTrack.prototype.goToSelectVehicle = function() {
+SelectTrack.prototype.goToSelectVehicle = function() {
   return element(this.tracks.continue).click();
 };
 
-module.exports = SelecTrack;
+// do a full select track
+SelectTrack.prototype.doFullSelectTrack = function(options) {
+  var track = options.track.name;
+
+  return this.login.doFullLogin(options)
+    .then(this.selectATrack.bind(this, track))
+    .then(this.goToSelectVehicle.bind(this));
+};
+
+module.exports = SelectTrack;

@@ -1,45 +1,45 @@
   {
     "vehicles": [{
-      "vName": "blue_dragonfly",
+      "vName": "Blue dragonfly",
       "vObject": "./game-assets/tracks/pond/vehicleInfo/blue_dragonflyObject.json",
       "vInfo": "./game-assets/tracks/pond/vehicleInfo/blue_dragonfly.json",
-      "vImage": "vehicles/blue_dragonfly.png",
+      "vImage": "images/vehicles/blue_dragonfly.png",
       "trackId": 6
     }, {
-      "vName": "blue_ladybug",
+      "vName": "Blue ladybug",
       "vObject": "./game-assets/tracks/pond/vehicleInfo/blue_ladybugObject.json",
       "vInfo": "./game-assets/tracks/pond/vehicleInfo/blue_ladybug.json",
-      "vImage": "vehicles/blue_ladybug.png",
+      "vImage": "images/vehicles/blue_ladybug.png",
       "trackId": 6
     }, {
-      "vName": "bumblebee",
+      "vName": "Brown bumblebee",
       "vObject": "./game-assets/tracks/pond/vehicleInfo/bumblebeeObject.json",
       "vInfo": "./game-assets/tracks/pond/vehicleInfo/bumblebee.json",
-      "vImage": "vehicles/bumblebee.png",
+      "vImage": "images/vehicles/bumblebee.png",
       "trackId": 6
     }, {
-      "vName": "green_dragonfly",
+      "vName": "Green dragonfly",
       "vObject": "./game-assets/tracks/pond/vehicleInfo/green_dragonflyObject.json",
       "vInfo": "./game-assets/tracks/pond/vehicleInfo/green_dragonfly.json",
-      "vImage": "vehicles/green_dragonfly.png",
+      "vImage": "images/vehicles/green_dragonfly.png",
       "trackId": 6
     }, {
-      "vName": "monarch_butterfly",
+      "vName": "Monarch butterfly",
       "vObject": "./game-assets/tracks/pond/vehicleInfo/monarch_butterflyObject.json",
       "vInfo": "./game-assets/tracks/pond/vehicleInfo/monarch_butterfly.json",
-      "vImage": "vehicles/monarch_butterfly.png",
+      "vImage": "images/vehicles/monarch_butterfly.png",
       "trackId": 6
     }, {
-      "vName": "red_ladybug",
+      "vName": "Red ladybug",
       "vObject": "./game-assets/tracks/pond/vehicleInfo/red_ladybugyObject.json",
       "vInfo": "./game-assets/tracks/pond/vehicleInfo/red_ladybug.json",
-      "vImage": "vehicles/red_ladybug.png",
+      "vImage": "images/vehicles/red_ladybug.png",
       "trackId": 6
     }, {
-      "vName": "yellow_ladybug",
+      "vName": "Yellow ladybug",
       "vObject": "./game-assets/tracks/pond/vehicleInfo/yellow_ladybugObject.json",
       "vInfo": "./game-assets/tracks/pond/vehicleInfo/yellow_ladybug.json",
-      "vImage": "vehicles/yellow_ladybug.png",
+      "vImage": "images/vehicles/yellow_ladybug.png",
       "trackId": 6
     }]
   }

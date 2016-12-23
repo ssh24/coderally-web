@@ -8,10 +8,10 @@ angular.module('app')
     function($scope, Track, $state, User, SelectedTrack) {
       $scope.username = User; // set username for account info
       $scope.track = SelectedTrack; // selected track
-      $scope.track.chosen = ''; // chosen vehicle
+      $scope.track.chosen = ''; // chosen track
 
       // check to see if user is logged in, if not redirect to forbidden
-      if ($scope.username.text == undefined)
+      if ($scope.username.text == undefined || $scope.username.text == '')
         $state.go('forbidden'); // go to forbidden page
       // else continue on select track page
       else {
@@ -28,13 +28,16 @@ angular.module('app')
         // upon selection of tracks tracks
         $scope.toggleTracks = function(track) {
           $scope.selected = track; // set the selected track border
-          $scope.track.chosen = track; // choose the selected
+          $scope.track.chosen = track; // set the selected track
           $scope.isDisabledNextSelectTrack = false; // enable next button
         };
 
-        // when clicking next after choosing a select track
+        // when clicking next after choosing a track
         $scope.nextSelectTrack = function() {
-          $state.go('select-vehicle'); // go to select vehicle once clicked next
+          if ($scope.username.text == undefined || $scope.username.text == '')
+            $state.go('forbidden'); // go to forbidden page
+          else
+            $state.go('select-vehicle'); // go to select vehicle once clicked next
         };
       }
     },

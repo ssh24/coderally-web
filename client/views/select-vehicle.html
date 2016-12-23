@@ -1,0 +1,69 @@
+<section>
+  <div class="sixteen wide column" ng-controller="SelectVehicleController">
+    <div class="ui segments">
+      <div>
+        <h3 id="userInfo" style="color:white;" align="right">Logged in as: {{username.text}}</h3>
+        <button ng-click="logout()" class="ui right labeled right floated button">Logout</button>
+      </div>
+      <div class="ui five top attached steps">
+        <div class="disabled step">
+          <i class="road icon"></i>
+          <div class="content">
+            <div class="title">Pick a Track</div>
+            <div class="description">Choose your favorite track</div>
+          </div>
+        </div>
+        <div class="active step">
+          <i class="car icon"></i>
+          <div class="content">
+            <div class="title">Pick a Vehicle</div>
+            <div class="description">Choose your favorite vehicle</div>
+          </div>
+        </div>
+        <div class="disabled step">
+          <i class="code icon"></i>
+          <div class="content">
+            <div class="title">Code</div>
+            <div class="description">Modify the parameters</div>
+          </div>
+        </div>
+        <div class="disabled step">
+          <i class="check icon"></i>
+          <div class="content">
+            <div class="title">Confirm</div>
+            <div class="description">Confirm your choice</div>
+          </div>
+        </div>
+        <div class="disabled step">
+          <i class="checkered flag icon"></i>
+          <div class="content">
+            <div class="title">Upload &amp; Race</div>
+            <div class="description">Use a custom agent code and race!</div>
+          </div>
+        </div>
+      </div>
+      <div class="ui very padded segment">
+        <h3 id="chosen-track" style="color:blue">Track chosen: {{chosenTrack.chosen.tName}}</h3>
+        <h3>Please select a vehicle: </h3>
+        <div>
+          <table class="ui table">
+            <tbody>
+              <tr>
+                <th ng-repeat="vehicle in vehicles">
+                  <div ng-click="toggleVehicles(vehicle)" ng-class="{selected: vehicle === selected}">
+                    <img ng-src="{{vehicle.vImage}}" height="100" width="=100" />
+                    <p>{{vehicle.vName}}</p>
+                  </div>
+                </th>
+              </tr>
+              <tbody>
+          </table>
+        </div>
+      </div>
+      <div class="ui secondary clearing segment">
+        <button ng-click="nextSelectVehicle()" ng-disabled="isDisabledNextSelectVehicle" class="ui right labeled icon blue right floated button"><i class="right arrow icon"></i>Continue</button>
+        <button ng-click="previousSelectVehicle()" class="ui left labeled icon blue left floated button"><i class="left arrow icon"></i>Previous</button>
+      </div>
+    </div>
+  </div>
+</section>

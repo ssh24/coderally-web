@@ -1,45 +1,45 @@
   {
     "vehicles": [{
-      "vName": "boat_black",
+      "vName": "Black boat",
       "vObject": "./game-assets/tracks/water/vehicleInfo/boat_blackObject.json",
       "vInfo": "./game-assets/tracks/water/vehicleInfo/boat_black.json",
-      "vImage": "vehicles/boat_black.png",
+      "vImage": "images/vehicles/boat_black.png",
       "trackId": 9
     }, {
-      "vName": "boat_blue",
+      "vName": "Blue boat",
       "vObject": "./game-assets/tracks/water/vehicleInfo/boat_blueObject.json",
       "vInfo": "./game-assets/tracks/water/vehicleInfo/boat_blue.json",
-      "vImage": "vehicles/boat_blue.png",
+      "vImage": "images/vehicles/boat_blue.png",
       "trackId": 9
     }, {
-      "vName": "boat_green",
+      "vName": "Green boat",
       "vObject": "./game-assets/tracks/water/vehicleInfo/boat_greenObject.json",
       "vInfo": "./game-assets/tracks/water/vehicleInfo/boat_green.json",
-      "vImage": "vehicles/boat_green.png",
+      "vImage": "images/vehicles/boat_green.png",
       "trackId": 9
     }, {
-      "vName": "boat_orange",
+      "vName": "Orange boat",
       "vObject": "./game-assets/tracks/water/vehicleInfo/boat_orangeObject.json",
       "vInfo": "./game-assets/tracks/water/vehicleInfo/boat_orange.json",
-      "vImage": "vehicles/boat_orange.png",
+      "vImage": "images/vehicles/boat_orange.png",
       "trackId": 9
     }, {
-      "vName": "boat_purple",
+      "vName": "Purple boat",
       "vObject": "./game-assets/tracks/water/vehicleInfo/boat_purpleObject.json",
       "vInfo": "./game-assets/tracks/water/vehicleInfo/boat_purple.json",
-      "vImage": "vehicles/boat_purple.png",
+      "vImage": "images/vehicles/boat_purple.png",
       "trackId": 9
     }, {
-      "vName": "boat_white",
+      "vName": "White boat",
       "vObject": "./game-assets/tracks/water/vehicleInfo/boat_whiteObject.json",
       "vInfo": "./game-assets/tracks/water/vehicleInfo/boat_white.json",
-      "vImage": "vehicles/boat_white.png",
+      "vImage": "images/vehicles/boat_white.png",
       "trackId": 9
     }, {
-      "vName": "boat_yellow",
+      "vName": "Yellow boat",
       "vObject": "./game-assets/tracks/water/vehicleInfo/boat_yellowObject.json",
       "vInfo": "./game-assets/tracks/water/vehicleInfo/boat_yellow.json",
-      "vImage": "vehicles/boat_yellow.png",
+      "vImage": "images/vehicles/boat_yellow.png",
       "trackId": 9
     }]
   }

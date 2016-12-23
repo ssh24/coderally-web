@@ -25,6 +25,10 @@ angular
         url: '/select-vehicle',
         templateUrl: 'views/select-vehicle.html',
         controller: 'SelectVehicleController',
+      }).state('modify-code', {
+        url: '/modify-code',
+        templateUrl: 'views/modify-code.html',
+        controller: 'ModifyCodeController',
       });
     $urlRouterProvider.otherwise('login');
   }]);

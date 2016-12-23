@@ -2,19 +2,23 @@
 // Utility functions that are shared across views and specs
 var EC = protractor.ExpectedConditions;
 
-var Utils = function() {
+var Utils = function() {};
 
+Utils.prototype.openView = function(link) {
+  return browser.get(link);
+};
+
+Utils.prototype.getButtonEnableStatus = function(element) {
+  return browser.findElement(element).isEnabled();
+};
+
+Utils.prototype.maximizeBrowserWindow = function() {
+  return browser.driver.manage().window().maximize();
 };
 
 Utils.prototype.waitForElement = function(element, timeout) {
   return browser.wait(function() {
     return browser.isElementPresent(element);
-  }, timeout);
-};
-
-Utils.prototype.waitForElementNonAngular = function(element, timeout) {
-  return browser.driver.wait(function() {
-    return browser.driver.isElementPresent(element);
   }, timeout);
 };
 
@@ -30,12 +34,6 @@ Utils.prototype.waitForElementDisplayed = function(element, timeout) {
   }, timeout);
 };
 
-Utils.prototype.waitForElementDisplayedNonAngular = function(element, timeout) {
-  return browser.driver.wait(function() {
-    return browser.driver.findElement(element).isDisplayed();
-  }, timeout);
-};
-
 Utils.prototype.waitUntilReady = function(element, timeout) {
   timeout = timeout || 10000;
 
@@ -45,10 +43,6 @@ Utils.prototype.waitUntilReady = function(element, timeout) {
 
 Utils.prototype.waitForElementClickable = function(e1, timeout) {
   return browser.wait(EC.elementToBeClickable(element(e1)), timeout);
-};
-
-Utils.prototype.waitForElementClickableNonAngular = function(e1, timeout) {
-  return browser.driver.wait(EC.elementToBeClickable(element(e1)), timeout);
 };
 
 module.exports = Utils;
