@@ -8,18 +8,21 @@ chai.use(chaiAsPromised);
 var expect = chai.expect;
 var Login = require('../../views/login-view');
 var SelectTrack = require('../../views/select-track-view');
+var SelectVehicle = require('../../views/select-vehicle-view');
 var config = require('../../config');
 var Utils = require('../../utils/shared-utils');
 
 describe('Select Track Test -', function() {
   this.timeout(10000);
 
-  var login, selectTrack, utils;
+  var login, selectTrack, selectVehicle, utils;
 
   before(function() {
     login = new Login();
     selectTrack = new SelectTrack();
+    selectVehicle = new SelectVehicle();
     utils = new Utils();
+    utils.maximizeBrowserWindow();
   });
 
   // login and check for select track page and logout
@@ -63,11 +66,18 @@ describe('Select Track Test -', function() {
       .then(function() {
         expect(selectTrack.getSelectedTrack.call(selectTrack)).to
           .equal(config.info.tracks[1].name);
+        var x = expect(utils.getButtonEnableStatus.call(utils,
+          selectTrack.tracks.continue)).to.eventually.be.true;
       })
       .then(selectTrack.goToSelectVehicle.bind(selectTrack))
       .then(function() {
         expect(browser.getCurrentUrl()).to.eventually
           .contain('#/select-vehicle');
+        var x = expect(utils.getButtonEnableStatus
+            .call(utils, selectVehicle.vehicles.back)).to.eventually
+          .be.true;
+        var y = expect(utils.getButtonEnableStatus.call(utils,
+          selectVehicle.vehicles.continue)).to.eventually.be.false;
       })
       .then(login.completeLogout.bind(login))
       .then(function() {

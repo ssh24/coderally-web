@@ -12,6 +12,10 @@ Utils.prototype.getButtonEnableStatus = function(element) {
   return browser.findElement(element).isEnabled();
 };
 
+Utils.prototype.maximizeBrowserWindow = function() {
+  return browser.driver.manage().window().maximize();
+};
+
 Utils.prototype.waitForElement = function(element, timeout) {
   return browser.wait(function() {
     return browser.isElementPresent(element);

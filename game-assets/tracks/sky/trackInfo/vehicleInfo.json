@@ -1,36 +1,36 @@
   {
     "vehicles": [{
-      "vName": "blue_plane",
+      "vName": "Blue plane",
       "vObject": "./game-assets/tracks/sky/vehicleInfo/plane_blueObject.json",
       "vInfo": "./game-assets/tracks/sky/vehicleInfo/plane_blue.json",
       "vImage": "images/vehicles/plane_blue.png",
       "trackId": 7
     }, {
-      "vName": "green_plane",
+      "vName": "Green plane",
       "vObject": "./game-assets/tracks/sky/vehicleInfo/plane_greenObject.json",
       "vInfo": "./game-assets/tracks/sky/vehicleInfo/plane_green.json",
       "vImage": "images/vehicles/plane_green.png",
       "trackId": 7
     }, {
-      "vName": "orange_plane",
+      "vName": "Orange plane",
       "vObject": "./game-assets/tracks/sky/vehicleInfo/plane_orangeObject.json",
       "vInfo": "./game-assets/tracks/sky/vehicleInfo/plane_orange.json",
       "vImage": "images/vehicles/plane_orange.png",
       "trackId": 7
     }, {
-      "vName": "red_plane",
+      "vName": "Red plane",
       "vObject": "./game-assets/tracks/sky/vehicleInfo/plane_redObject.json",
       "vInfo": "./game-assets/tracks/sky/vehicleInfo/plane_red.json",
       "vImage": "images/vehicles/plane_red.png",
       "trackId": 7
     }, {
-      "vName": "teal_plane",
+      "vName": "Teal plane",
       "vObject": "./game-assets/tracks/sky/vehicleInfo/plane_tealObject.json",
       "vInfo": "./game-assets/tracks/sky/vehicleInfo/plane_teal.json",
       "vImage": "images/vehicles/plane_teal.png",
       "trackId": 7
     }, {
-      "vName": "yellow_plane",
+      "vName": "Yellow plane",
       "vObject": "./game-assets/tracks/sky/vehicleInfo/plane_yellowObject.json",
       "vInfo": "./game-assets/tracks/sky/vehicleInfo/plane_yellow.json",
       "vImage": "images/vehicles/plane_yellow.png",

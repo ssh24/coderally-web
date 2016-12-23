@@ -23,6 +23,7 @@ describe('Account Login Test -', function() {
     selectTrack = new SelectTrack();
     forbidden = new Forbidden();
     utils = new Utils();
+    utils.maximizeBrowserWindow();
   });
 
   // access the select track page to check forbidden

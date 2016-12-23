@@ -1,42 +1,42 @@
   {
     "vehicles": [{
-      "vName": "blue_car",
+      "vName": "Blue car",
       "vObject": "./game-assets/tracks/figure8/vehicleInfo/car_blueObject.json",
       "vInfo": "./game-assets/tracks/figure8/vehicleInfo/car_blue.json",
       "vImage": "images/vehicles/car_blue.png",
       "trackId": 4
     }, {
-      "vName": "grey_car",
+      "vName": "Grey car",
       "vObject": "./game-assets/tracks/figure8/vehicleInfo/car_greyObject.json",
       "vInfo": "./game-assets/tracks/figure8/vehicleInfo/car_grey.json",
       "vImage": "images/vehicles/car_grey.png",
       "trackId": 4
     }, {
-      "vName": "orange_car",
+      "vName": "Orange car",
       "vObject": "./game-assets/tracks/figure8/vehicleInfo/car_orangeObject.json",
       "vInfo": "./game-assets/tracks/figure8/vehicleInfo/car_orange.json",
       "vImage": "images/vehicles/car_orange.png",
       "trackId": 4
     }, {
-      "vName": "purple_car",
+      "vName": "Purple car",
       "vObject": "./game-assets/tracks/figure8/vehicleInfo/car_purpleObject.json",
       "vInfo": "./game-assets/tracks/figure8/vehicleInfo/car_purple.json",
       "vImage": "images/vehicles/car_purple.png",
       "trackId": 4
     }, {
-      "vName": "red_car",
+      "vName": "Red car",
       "vObject": "./game-assets/tracks/figure8/vehicleInfo/car_redObject.json",
       "vInfo": "./game-assets/tracks/figure8/vehicleInfo/car_red.json",
       "vImage": "images/vehicles/car_red.png",
       "trackId": 4
     }, {
-      "vName": "teal_car",
+      "vName": "Teal car",
       "vObject": "./game-assets/tracks/figure8/vehicleInfo/car_tealObject.json",
       "vInfo": "./game-assets/tracks/figure8/vehicleInfo/car_teal.json",
       "vImage": "images/vehicles/car_teal.png",
       "trackId": 4
     }, {
-      "vName": "yellow_car",
+      "vName": "Yellow car",
       "vObject": "./game-assets/tracks/figure8/vehicleInfo/car_yellowObject.json",
       "vInfo": "./game-assets/tracks/figure8/vehicleInfo/car_yellow.json",
       "vImage": "images/vehicles/car_yellow.png",

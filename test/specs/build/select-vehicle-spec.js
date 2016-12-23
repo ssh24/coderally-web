@@ -22,6 +22,7 @@ describe('Select Vehicle Test -', function() {
     selectTrack = new SelectTrack();
     selectVehicle = new SelectVehicle();
     utils = new Utils();
+    utils.maximizeBrowserWindow();
   });
 
   // login and check for select vehicle page and logout
@@ -73,11 +74,18 @@ describe('Select Vehicle Test -', function() {
         .then(function() {
           expect(selectVehicle.getSelectedVehicle.call(selectVehicle)).to
             .equal(config.info.tracks[1].vehicles[3].name);
+          var x = expect(utils.getButtonEnableStatus
+              .call(utils, selectVehicle.vehicles.back)).to.eventually
+            .be.true;
+          var y = expect(utils.getButtonEnableStatus.call(utils,
+            selectVehicle.vehicles.continue)).to.eventually.be.true;
         })
         .then(selectVehicle.goToSelectTrack.bind(selectVehicle))
         .then(function() {
           expect(browser.getCurrentUrl()).to.eventually
             .contain('#/select-track');
+          var x = expect(utils.getButtonEnableStatus.call(utils,
+            selectTrack.tracks.continue)).to.eventually.be.false;
         })
         .then(selectTrack.selectATrack.bind(selectTrack,
           config.login.track.name))

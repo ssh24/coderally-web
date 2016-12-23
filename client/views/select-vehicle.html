@@ -52,7 +52,7 @@
                 <th ng-repeat="vehicle in vehicles">
                   <div ng-click="toggleVehicles(vehicle)" ng-class="{selected: vehicle === selected}">
                     <img ng-src="{{vehicle.vImage}}" height="100" width="=100" />
-                    <p>{{(vehicle.vName.charAt(0).toUpperCase() + vehicle.vName.slice(1)).split('_')[0]}} {{(vehicle.vName.charAt(0).toUpperCase() + vehicle.vName.slice(1)).split('_')[1]}}</p>
+                    <p>{{vehicle.vName}}</p>
                   </div>
                 </th>
               </tr>

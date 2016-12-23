@@ -1,42 +1,42 @@
   {
     "vehicles": [{
-      "vName": "blue_orb",
+      "vName": "Blue orb",
       "vObject": "./game-assets/tracks/circuit/vehicleInfo/blue_orbObject.json",
       "vInfo": "./game-assets/tracks/circuit/vehicleInfo/blue_orb.json",
       "vImage": "images/vehicles/blue_orb.png",
       "trackId": 1
     }, {
-      "vName": "green_orb",
+      "vName": "Green orb",
       "vObject": "./game-assets/tracks/circuit/vehicleInfo/green_orbObject.json",
       "vInfo": "./game-assets/tracks/circuit/vehicleInfo/green_orb.json",
       "vImage": "images/vehicles/green_orb.png",
       "trackId": 1
     }, {
-      "vName": "red_orb",
+      "vName": "Red orb",
       "vObject": "./game-assets/tracks/circuit/vehicleInfo/red_orbObject.json",
       "vInfo": "./game-assets/tracks/circuit/vehicleInfo/red_orb.json",
       "vImage": "images/vehicles/red_orb.png",
       "trackId": 1
     }, {
-      "vName": "orange_orb",
+      "vName": "Orange orb",
       "vObject": "./game-assets/tracks/circuit/vehicleInfo/orange_orbObject.json",
       "vInfo": "./game-assets/tracks/circuit/vehicleInfo/orange_orb.json",
       "vImage": "images/vehicles/orange_orb.png",
       "trackId": 1
     }, {
-      "vName": "turqousie_orb",
+      "vName": "Turqousie orb",
       "vObject": "./game-assets/tracks/circuit/vehicleInfo/turqousie_orbObject.json",
       "vInfo": "./game-assets/tracks/circuit/vehicleInfo/turqousie_orb.json",
       "vImage": "images/vehicles/turqousie_orb.png",
       "trackId": 1
     }, {
-      "vName": "violet_orb",
+      "vName": "Violet orb",
       "vObject": "./game-assets/tracks/circuit/vehicleInfo/violet_orbObject.json",
       "vInfo": "./game-assets/tracks/circuit/vehicleInfo/violet_orb.json",
       "vImage": "images/vehicles/violet_orb.png",
       "trackId": 1
     }, {
-      "vName": "yellow_orb",
+      "vName": "Yellow orb",
       "vObject": "./game-assets/tracks/circuit/vehicleInfo/yellow_orbObject.json",
       "vInfo": "./game-assets/tracks/circuit/vehicleInfo/yellow_orb.json",
       "vImage": "images/vehicles/yellow_orb.png",
