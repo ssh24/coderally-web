@@ -103,6 +103,17 @@ angular.module('app')
             $scope.isDisabledLogin = false; // enable login button
             // proceed onto the next page
             $scope.login = function() {
+              $http({
+                method: 'POST',
+                url: 'http://localhost/welcome.php',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+              }).then(function successCallback(response) {
+                console.log('Success: ' + response.data);
+              }, function errorCallback(response) {
+                console.log('Error: ' + response);
+              });
               $state.go('select-track'); // once logged in go to select-track page
             };
           } else {
