@@ -44,7 +44,7 @@ angular.module('app')
           if ($scope.username.text == undefined || $scope.username.text == '')
             $state.go('forbidden'); // go to forbidden page
           else
-            $state.go('select-track');
+            $state.go('select-track'); // go to select track page
         };
 
         // when clicking next after choosing a vehicle
@@ -52,7 +52,7 @@ angular.module('app')
           if ($scope.username.text == undefined || $scope.username.text == '')
             $state.go('forbidden'); // go to forbidden page
           else
-            $state.go('vehicle-code');
+            $state.go('vehicle-code'); // go to vehicle code page
         };
       }
     },

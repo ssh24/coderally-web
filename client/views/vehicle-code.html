@@ -53,19 +53,17 @@
           <p>{{vehicle.chosen.vName}}</p>
         </div>
         <h3>Tune your vehicle: </h3>
-        <div ui-ace="{
+        <div id="editor" ng-model="vehicleCode" ui-ace="{
         mode: 'json',
         theme: 'idle_fingers',
         useWrapMode: true,
         onLoad: aceLoaded
       }"></div>
-        <button id="copy-code-btn" class="ui button">
-                      <i class="copy icon"></i>Copy code to clipboard
-                  </button>
+        <button clipboard supported="supported" text="vehicleCode" on-copied="successCopy()"><i class="copy icon"></i>Copy code to clipboard</button>
         <div id="success-copy" style="display:none;color:green">Successfully copied to clipboard</div>
       </div>
       <div class="ui secondary clearing segment">
-        <button ng-click="nextVehicleCode()" ng-disabled="isDisabledNextVehicleCode" class="ui right labeled icon blue right floated button"><i class="pointing right icon"></i>Continue</button>
+        <button ng-click="nextVehicleCode()" class="ui right labeled icon blue right floated button"><i class="pointing right icon"></i>Continue</button>
         <button ng-click="previousVehicleCode()" class="ui left labeled icon blue left floated button"><i class="pointing left icon"></i>Previous</button>
       </div>
     </div>

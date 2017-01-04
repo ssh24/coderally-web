@@ -104,11 +104,11 @@ describe('Select Vehicle Test -', function() {
         .then(function() {
           expect(browser.getCurrentUrl()).to.eventually
             .contain('#/vehicle-code');
+        })
+        .then(login.completeLogout.bind(login))
+        .then(function() {
+          expect(browser.getCurrentUrl()).to.eventually
+            .contain('#/login');
         });
-      // .then(login.completeLogout.bind(login))
-      // .then(function() {
-      //   expect(browser.getCurrentUrl()).to.eventually
-      //     .contain('#/login');
-      // });
     });
 });

@@ -5,6 +5,7 @@ angular
     'ui.router',
     'lbServices',
     'ui.ace',
+    'angular-clipboard',
   ])
   .config(['$stateProvider', '$urlRouterProvider', function($stateProvider,
     $urlRouterProvider) {
