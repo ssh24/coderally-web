@@ -1,0 +1,45 @@
+  {
+    "vehicles": [{
+      "vName": "Blue car",
+      "vObject": "game-assets/tracks/desk/vehicleInfo/car_blueObject.json",
+      "vInfo": "game-assets/tracks/desk/vehicleInfo/car_blue.json",
+      "vImage": "game-assets/images/vehicles/car_blue.png",
+      "trackId": 3
+    }, {
+      "vName": "Grey car",
+      "vObject": "game-assets/tracks/desk/vehicleInfo/car_greyObject.json",
+      "vInfo": "game-assets/tracks/desk/vehicleInfo/car_grey.json",
+      "vImage": "game-assets/images/vehicles/car_grey.png",
+      "trackId": 3
+    }, {
+      "vName": "Orange car",
+      "vObject": "game-assets/tracks/desk/vehicleInfo/car_orangeObject.json",
+      "vInfo": "game-assets/tracks/desk/vehicleInfo/car_orange.json",
+      "vImage": "game-assets/images/vehicles/car_orange.png",
+      "trackId": 3
+    }, {
+      "vName": "Purple car",
+      "vObject": "game-assets/tracks/desk/vehicleInfo/car_purpleObject.json",
+      "vInfo": "game-assets/tracks/desk/vehicleInfo/car_purple.json",
+      "vImage": "game-assets/images/vehicles/car_purple.png",
+      "trackId": 3
+    }, {
+      "vName": "Red car",
+      "vObject": "game-assets/tracks/desk/vehicleInfo/car_redObject.json",
+      "vInfo": "game-assets/tracks/desk/vehicleInfo/car_red.json",
+      "vImage": "game-assets/images/vehicles/car_red.png",
+      "trackId": 3
+    }, {
+      "vName": "Teal car",
+      "vObject": "game-assets/tracks/desk/vehicleInfo/car_tealObject.json",
+      "vInfo": "game-assets/tracks/desk/vehicleInfo/car_teal.json",
+      "vImage": "game-assets/images/vehicles/car_teal.png",
+      "trackId": 3
+    }, {
+      "vName": "Yellow car",
+      "vObject": "game-assets/tracks/desk/vehicleInfo/car_yellowObject.json",
+      "vInfo": "game-assets/tracks/desk/vehicleInfo/car_yellow.json",
+      "vImage": "game-assets/images/vehicles/car_yellow.png",
+      "trackId": 3
+    }]
+  }

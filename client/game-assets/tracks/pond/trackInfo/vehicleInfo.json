@@ -1,0 +1,45 @@
+  {
+    "vehicles": [{
+      "vName": "Blue dragonfly",
+      "vObject": "game-assets/tracks/pond/vehicleInfo/blue_dragonflyObject.json",
+      "vInfo": "game-assets/tracks/pond/vehicleInfo/blue_dragonfly.json",
+      "vImage": "game-assets/images/vehicles/blue_dragonfly.png",
+      "trackId": 6
+    }, {
+      "vName": "Blue ladybug",
+      "vObject": "game-assets/tracks/pond/vehicleInfo/blue_ladybugObject.json",
+      "vInfo": "game-assets/tracks/pond/vehicleInfo/blue_ladybug.json",
+      "vImage": "game-assets/images/vehicles/blue_ladybug.png",
+      "trackId": 6
+    }, {
+      "vName": "Brown bumblebee",
+      "vObject": "game-assets/tracks/pond/vehicleInfo/bumblebeeObject.json",
+      "vInfo": "game-assets/tracks/pond/vehicleInfo/bumblebee.json",
+      "vImage": "game-assets/images/vehicles/bumblebee.png",
+      "trackId": 6
+    }, {
+      "vName": "Green dragonfly",
+      "vObject": "game-assets/tracks/pond/vehicleInfo/green_dragonflyObject.json",
+      "vInfo": "game-assets/tracks/pond/vehicleInfo/green_dragonfly.json",
+      "vImage": "game-assets/images/vehicles/green_dragonfly.png",
+      "trackId": 6
+    }, {
+      "vName": "Monarch butterfly",
+      "vObject": "game-assets/tracks/pond/vehicleInfo/monarch_butterflyObject.json",
+      "vInfo": "game-assets/tracks/pond/vehicleInfo/monarch_butterfly.json",
+      "vImage": "game-assets/images/vehicles/monarch_butterfly.png",
+      "trackId": 6
+    }, {
+      "vName": "Red ladybug",
+      "vObject": "game-assets/tracks/pond/vehicleInfo/red_ladybugyObject.json",
+      "vInfo": "game-assets/tracks/pond/vehicleInfo/red_ladybug.json",
+      "vImage": "game-assets/images/vehicles/red_ladybug.png",
+      "trackId": 6
+    }, {
+      "vName": "Yellow ladybug",
+      "vObject": "game-assets/tracks/pond/vehicleInfo/yellow_ladybugObject.json",
+      "vInfo": "game-assets/tracks/pond/vehicleInfo/yellow_ladybug.json",
+      "vImage": "game-assets/images/vehicles/yellow_ladybug.png",
+      "trackId": 6
+    }]
+  }
