@@ -76,23 +76,28 @@ angular.module('app')
       /** click on server connection btn **/
       $scope.serverConnBtn = function() {
         $scope.server = $scope.customserver; // assign chosen server to the link
+        $scope.connectionBtn = 'Connecting to custom server ...'; // connect to custom server
         $scope.isDisabledServer = true; // disable server field
+
+        // do a https request to connect to the server
         $http({
           method: 'GET',
           url: $scope.server,
         }).then(function successCallback(response) {
-          $scope.isDisabledAuth = false; // enable auth field
-          connBtn.addClass('positive'); // add postive class to server connection btm
           $scope.connectionBtn = 'Successfully connected to server.'; // success message upon connecting to remote server
+          connBtn.addClass('positive'); // add postive class to server connection btn
+          $scope.isDisabledAuth = false; // enable auth field
         }, function errorCallback(response) {
-          connBtn.addClass('negative'); // add negative class to server connection btm
           $scope.connectionBtn = 'Error connecting to server.'; // error message upon connecting to remote server
+          connBtn.addClass('negative'); // add negative class to server connection btn
         });
       };
 
       /** once authBtn is clicked process a request and get info **/
       $scope.auth = function() {
         $scope.authbutton = 'Authenticating user ...'; // authenticate user
+        $scope.isDisabledAuth = true; // disable auth field
+
         // do a https request to the server to Authenticate user
         $http({
           method: 'GET',
@@ -103,6 +108,7 @@ angular.module('app')
             authBtn.addClass('positive'); // set button status to positive
             $scope.authbutton = 'User successfully authenicated.'; // set button text to success
             $scope.isDisabledLogin = false; // enable login button
+
             // proceed onto the next page
             $scope.login = function() {
               // create a user directory with an agent file on it
@@ -118,6 +124,7 @@ angular.module('app')
                 }),
               }).then(function successCallback(response) {},
                 function errorCallback(response) {});
+
               // once logged in go to select-track page
               $state.go('select-track');
             };
@@ -133,7 +140,8 @@ angular.module('app')
             'numbers and underscores only.'; // set button text to error
           else
             $scope.authbutton = 'Error authenticating the user.' +
-            ' Please contact the server side developers for more info.'; // set button text to error
+            ' Please try another server or ' +
+            'contact the server side developers for more info.'; // set button text to error
           authBtn.addClass('negative'); // set button status to negative
           $scope.isDisabledAuth = true; // disable auth field
         });
