@@ -25,7 +25,8 @@
     "karma-mocha": "^1.0.1",
     "karma-mocha-reporter": "^1.3.0",
     "mochawesome-screenshots": "^1.4.7",
-    "yargs": "^4.8.1"
+    "yargs": "^4.8.1",
+    "coderally-agent": "git+https://github.com/ssh24/coderally-agent.git"
   },
   "devDependencies": {
     "eslint": "^3.11.1",

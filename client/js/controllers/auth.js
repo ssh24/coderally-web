@@ -92,10 +92,12 @@ angular.module('app')
 
       /** once authBtn is clicked process a request and get info **/
       $scope.auth = function() {
+        $scope.authbutton = 'Authenticating user ...'; // authenticate user
         // do a https request to the server to Authenticate user
         $http({
           method: 'GET',
-          url: 'http://' + $scope.server + '/CodeRallyWeb/GetUser?user_name=' + $scope.userName.text,
+          url: 'http://' + $scope.server + '/CodeRallyWeb/GetUser?user_name=' +
+            $scope.userName.text,
         }).then(function successCallback(response) {
           if (response.data.success) {
             authBtn.addClass('positive'); // set button status to positive
@@ -103,7 +105,21 @@ angular.module('app')
             $scope.isDisabledLogin = false; // enable login button
             // proceed onto the next page
             $scope.login = function() {
-              $state.go('select-track'); // once logged in go to select-track page
+              // create a user directory with an agent file on it
+              $http({
+                method: 'POST',
+                url: 'https://code-rally-php.000webhostapp.com/create-dir.php',
+                headers: {
+                  'Content-Type': 'application/x-www-form-urlencoded; ' +
+                    'charset=UTF-8',
+                },
+                data: JSON.stringify({
+                  username: $scope.userName.text,
+                }),
+              }).then(function successCallback(response) {},
+                function errorCallback(response) {});
+              // once logged in go to select-track page
+              $state.go('select-track');
             };
           } else {
             $scope.authbutton = 'Please enter a valid username with letters, ' +
@@ -117,7 +133,7 @@ angular.module('app')
             'numbers and underscores only.'; // set button text to error
           else
             $scope.authbutton = 'Error authenticating the user.' +
-            ' Please contact your server side developers for more info.'; // set button text to error
+            ' Please contact the server side developers for more info.'; // set button text to error
           authBtn.addClass('negative'); // set button status to negative
           $scope.isDisabledAuth = true; // disable auth field
         });

@@ -6,7 +6,7 @@
       "vImage": "images/vehicles/orbiter_blue.png",
       "trackId": 5
     }, {
-      "vName": "Brown orbitern",
+      "vName": "Brown orbiter",
       "vObject": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_brownObject.json",
       "vInfo": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_brown.json",
       "vImage": "images/vehicles/orbiter_brown.png",
