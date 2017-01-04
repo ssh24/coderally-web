@@ -9,10 +9,10 @@
     </div>
     <div class="ui medium header">Enter your username:</div>
     <div class="ui action input">
-      <input type="text" name="username" ng-disabled="isDisabledAuth" ng-model="userName.text" ng-pattern="example.word">
+      <input type="text" name="username" ng-disabled="isDisabledAuth" ng-model="userName.text">
       <button id="authButton" ng-click="auth()" ng-disabled="isDisabledAuth" class="ui button">{{authbutton}}</button>
     </div>
     <br></br>
-      <button ng-click="login()" ng-disabled="isDisabledLogin" class="ui icon blue button">Sign in</button>
+    <button ng-click="login()" ng-disabled="isDisabledLogin" class="ui icon blue button">Sign in</button>
   </div>
 </section>
