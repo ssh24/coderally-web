@@ -4,6 +4,7 @@ angular
   .module('app', [
     'ui.router',
     'lbServices',
+    'ui.ace',
   ])
   .config(['$stateProvider', '$urlRouterProvider', function($stateProvider,
     $urlRouterProvider) {
@@ -25,10 +26,10 @@ angular
         url: '/select-vehicle',
         templateUrl: 'views/select-vehicle.html',
         controller: 'SelectVehicleController',
-      }).state('modify-code', {
-        url: '/modify-code',
-        templateUrl: 'views/modify-code.html',
-        controller: 'ModifyCodeController',
+      }).state('vehicle-code', {
+        url: '/vehicle-code',
+        templateUrl: 'views/vehicle-code.html',
+        controller: 'VehicleCodeController',
       });
     $urlRouterProvider.otherwise('login');
   }]);

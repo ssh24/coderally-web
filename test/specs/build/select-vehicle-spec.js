@@ -103,7 +103,7 @@ describe('Select Vehicle Test -', function() {
         .then(selectVehicle.goToModifyCode.bind(selectVehicle))
         .then(function() {
           expect(browser.getCurrentUrl()).to.eventually
-            .contain('#/modify-code');
+            .contain('#/vehicle-code');
         });
       // .then(login.completeLogout.bind(login))
       // .then(function() {

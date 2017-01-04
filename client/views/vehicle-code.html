@@ -1,0 +1,73 @@
+<section>
+  <div class="sixteen wide column" ng-controller="VehicleCodeController">
+    <div class="ui segments">
+      <div>
+        <h3 id="userInfo" style="color:white;" align="right">Logged in as: {{username.text}}</h3>
+        <button ng-click="logout()" class="ui right labeled right floated button">Logout</button>
+      </div>
+      <div class="ui five top attached steps">
+        <div class="disabled step">
+          <i class="road icon"></i>
+          <div class="content">
+            <div class="title">Pick a Track</div>
+            <div class="description">Choose your favorite track</div>
+          </div>
+        </div>
+        <div class="disabled step">
+          <i class="car icon"></i>
+          <div class="content">
+            <div class="title">Pick a Vehicle</div>
+            <div class="description">Choose your favorite vehicle</div>
+          </div>
+        </div>
+        <div class="active step">
+          <i class="configure icon"></i>
+          <div class="content">
+            <div class="title">Tune your Vehicle</div>
+            <div class="description">Adjust vehicle to your needs</div>
+          </div>
+        </div>
+        <div class="disabled step">
+          <i class="code icon"></i>
+          <div class="content">
+            <div class="title">Customize Agent Code</div>
+            <div class="description">Modify agent parameters</div>
+          </div>
+        </div>
+        <div class="disabled step">
+          <i class="check icon"></i>
+          <div class="content">
+            <div class="title">Confirm</div>
+            <div class="description">Confirm your choice and race</div>
+          </div>
+        </div>
+      </div>
+      <div class="ui very padded segment">
+        <h3 style="color:blue">Current race selection: </h3>
+        <div class="imgContainer" id="chosen-track">
+          <img ng-src="{{track.chosen.tImage}}" height="100" width="=100" style='border:3px solid #000000' />
+          <p>{{track.chosen.tName}}</p>
+        </div>
+        <div class="imgContainer" id="chosen-vehicle">
+          <img ng-src="{{vehicle.chosen.vImage}}" height="100" width="=100" style='border:3px solid #000000' />
+          <p>{{vehicle.chosen.vName}}</p>
+        </div>
+        <h3>Modify your vehicle: </h3>
+        <div ui-ace="{
+        mode: 'json',
+        theme: 'idle_fingers',
+        useWrapMode: true,
+        onLoad: aceLoaded
+      }"></div>
+        <button id="copy-code-btn" class="ui button">
+                      <i class="copy icon"></i>Copy code to clipboard
+                  </button>
+        <div id="success-copy" style="display:none;color:green">Successfully copied to clipboard</div>
+      </div>
+      <div class="ui secondary clearing segment">
+        <button ng-click="nextVehicleCode()" ng-disabled="isDisabledNextVehicleCode" class="ui right labeled icon blue right floated button"><i class="pointing right icon"></i>Continue</button>
+        <button ng-click="previousVehicleCode()" class="ui left labeled icon blue left floated button"><i class="pointing left icon"></i>Previous</button>
+      </div>
+    </div>
+  </div>
+</section>

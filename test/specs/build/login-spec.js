@@ -63,10 +63,10 @@ describe('Account Login Test -', function() {
   it('Select a server', function() {
     expect(login.getSelectedServer.call(login))
       .to.eventually.contain(config.info.servers[0].name)
-      .then(login.selectServer.bind(login, config.info.servers[5].name))
+      .then(login.selectServer.bind(login, config.login.server))
       .then(function() {
         expect(login.getSelectedServer.call(login))
-          .to.eventually.contain(config.info.servers[5].name);
+          .to.eventually.contain(config.login.server);
       });
   });
 
