@@ -49,10 +49,9 @@ SelectTrack.prototype.goToSelectVehicle = function() {
 
 // do a full select track
 SelectTrack.prototype.doFullSelectTrack = function(options) {
-  var track = options.track.name;
+  var track = options.name;
 
-  return this.login.doFullLogin(options)
-    .then(this.selectATrack.bind(this, track))
+  return this.selectATrack(track)
     .then(this.goToSelectVehicle.bind(this));
 };
 

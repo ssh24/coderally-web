@@ -1,6 +1,6 @@
 'use strict';
 
-/* select track spec test. to run this single test: gulp test:build --spec test/specs/select-track-spec.js */
+/* select track spec test. to run this single test: gulp test:build --spec test/specs/select-vehicle-spec.js */
 
 var chai = require('chai');
 var chaiAsPromised = require('chai-as-promised');
@@ -27,7 +27,8 @@ describe('Select Vehicle Test -', function() {
 
   // login and check for select vehicle page and logout
   it('Check for select vehicle page after logging in', function() {
-    selectTrack.doFullSelectTrack(config.login)
+    login.doFullLogin(config.login)
+      .then(selectTrack.doFullSelectTrack.bind(selectTrack, config.login.track))
       .then(function() {
         expect(login.getLoggedInUser.call(login)).to
           .eventually.contain(config.login.username);
@@ -43,7 +44,8 @@ describe('Select Vehicle Test -', function() {
 
   // login and proceed to select vehicle page
   it('Login and proceed to select vehicle page', function() {
-    selectTrack.doFullSelectTrack(config.login)
+    login.doFullLogin(config.login)
+      .then(selectTrack.doFullSelectTrack.bind(selectTrack, config.login.track))
       .then(function() {
         expect(login.getLoggedInUser.call(login)).to
           .eventually.contain(config.login.username);
@@ -100,7 +102,7 @@ describe('Select Vehicle Test -', function() {
           expect(selectVehicle.getSelectedVehicle.call(selectVehicle)).to
             .equal(config.info.tracks[1].vehicles[3].name);
         })
-        .then(selectVehicle.goToModifyCode.bind(selectVehicle))
+        .then(selectVehicle.goToVehicleCode.bind(selectVehicle))
         .then(function() {
           expect(browser.getCurrentUrl()).to.eventually
             .contain('#/vehicle-code');
