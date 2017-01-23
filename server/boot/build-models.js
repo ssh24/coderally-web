@@ -10,55 +10,63 @@
 // var vehicles = [];
 //
 // var Circuit =
-//   fs.readFileSync('./game-assets/tracks/circuit/trackInfo/vehicleInfo.json');
+//   fs.
+// readFileSync('./client/game-assets/tracks/circuit/trackInfo/vehicleInfo.json');
 // var Desert =
-//   fs.readFileSync('./game-assets/tracks/desert/trackInfo/vehicleInfo.json');
+//   fs.
+// readFileSync('./client/game-assets/tracks/desert/trackInfo/vehicleInfo.json');
 // var Desk =
-//   fs.readFileSync('./game-assets/tracks/desk/trackInfo/vehicleInfo.json');
+//   fs.
+// readFileSync('./client/game-assets/tracks/desk/trackInfo/vehicleInfo.json');
 // var Figure8 =
-//   fs.readFileSync('./game-assets/tracks/figure8/trackInfo/vehicleInfo.json');
+//   fs.
+// readFileSync('./client/game-assets/tracks/figure8/trackInfo/vehicleInfo.json');
 // var LowEarthOrbit =
-//   fs.readFileSync
-//   ('./game-assets/tracks/lowearthorbit/trackInfo/vehicleInfo.json');
+//   fs.readFileSync('./client/game-assets/tracks/lowearthorbit/' +
+//     'trackInfo/vehicleInfo.json');
 // var Pond =
-//   fs.readFileSync('./game-assets/tracks/pond/trackInfo/vehicleInfo.json');
+//   fs.
+// readFileSync('./client/game-assets/tracks/pond/trackInfo/vehicleInfo.json');
 // var Sky =
-//   fs.readFileSync('./game-assets/tracks/sky/trackInfo/vehicleInfo.json');
+//   fs.
+// readFileSync('./client/game-assets/tracks/sky/trackInfo/vehicleInfo.json');
 // var Space =
-//   fs.readFileSync('./game-assets/tracks/space/trackInfo/vehicleInfo.json');
+//   fs.
+// readFileSync('./client/game-assets/tracks/space/trackInfo/vehicleInfo.json');
 // var Water =
-//   fs.readFileSync('./game-assets/tracks/water/trackInfo/vehicleInfo.json');
+//   fs.
+// readFileSync('./client/game-assets/tracks/water/trackInfo/vehicleInfo.json');
 //
 // module.exports = function(app) {
 //   var datasource = app.dataSources.db;
 //
 //   var tracks = [{
 //     tName: 'Circuit',
-//     tImage: 'images/tracks/circuit.jpg',
+//     tImage: 'game-assets/images/tracks/circuit.jpg',
 //   }, {
 //     tName: 'Desert',
-//     tImage: 'images/tracks/desert.jpg',
+//     tImage: 'game-assets/images/tracks/desert.jpg',
 //   }, {
 //     tName: 'Desk',
-//     tImage: 'images/tracks/desk.jpg',
+//     tImage: 'game-assets/images/tracks/desk.jpg',
 //   }, {
 //     tName: 'Figure8',
-//     tImage: 'images/tracks/figure8.jpg',
+//     tImage: 'game-assets/images/tracks/figure8.jpg',
 //   }, {
 //     tName: 'LowEarthOrbit',
-//     tImage: 'images/tracks/lowearthorbit.jpg',
+//     tImage: 'game-assets/images/tracks/lowearthorbit.jpg',
 //   }, {
 //     tName: 'Pond',
-//     tImage: 'images/tracks/pond.jpg',
+//     tImage: 'game-assets/images/tracks/pond.jpg',
 //   }, {
 //     tName: 'Sky',
-//     tImage: 'images/tracks/sky.jpg',
+//     tImage: 'game-assets/images/tracks/sky.jpg',
 //   }, {
 //     tName: 'Space',
-//     tImage: 'images/tracks/space.jpg',
+//     tImage: 'game-assets/images/tracks/space.jpg',
 //   }, {
 //     tName: 'Water',
-//     tImage: 'images/tracks/water.jpg',
+//     tImage: 'game-assets/images/tracks/water.jpg',
 //   }];
 //
 //   datasource.automigrate('Track', function(err) {

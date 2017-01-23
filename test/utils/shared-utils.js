@@ -16,6 +16,13 @@ Utils.prototype.maximizeBrowserWindow = function() {
   return browser.driver.manage().window().maximize();
 };
 
+Utils.prototype.clearThenSendKeys = function(elem, keys) {
+  return elem.clear()
+    .then(function() {
+      return elem.sendKeys(keys);
+    });
+};
+
 Utils.prototype.waitForElement = function(element, timeout) {
   return browser.wait(function() {
     return browser.isElementPresent(element);

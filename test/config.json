@@ -3,7 +3,29 @@
     "server": "Worldwide Practise Server",
     "username": "testuser",
     "track": {
-      "name": "Desert"
+      "name": "Desert",
+      "vehicles": [{
+        "name": "Black buggy",
+        "trackId": 2
+      }, {
+        "name": "Blue buggy",
+        "trackId": 2
+      }, {
+        "name": "Green buggy",
+        "trackId": 2
+      }, {
+        "name": "Orange buggy",
+        "trackId": 2
+      }, {
+        "name": "Pink buggy",
+        "trackId": 2
+      }, {
+        "name": "Purple buggy",
+        "trackId": 2
+      }, {
+        "name": "Teal buggy",
+        "trackId": 2
+      }]
     }
   },
   "info": {

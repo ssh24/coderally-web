@@ -6,9 +6,9 @@ angular.module('app')
   .controller('SelectVehicleController', ['$scope', 'Vehicle', '$state', 'User',
     'SelectedTrack', 'SelectedVehicle',
     function($scope, Vehicle, $state, User, SelectedTrack, SelectedVehicle) {
-      $scope.username = User; // set username for account info
-      $scope.chosenTrack = SelectedTrack; // set selected track for getting vehicle info
-      $scope.vehicle = SelectedVehicle; // selected vehicle
+      $scope.username = User; // get username info
+      $scope.chosenTrack = SelectedTrack; // get selected track info
+      $scope.vehicle = SelectedVehicle; // set selected vehicle
       $scope.vehicle.chosen = ''; // chosen vehicle
 
       // check to see if user is logged in, if not redirect to forbidden
@@ -44,7 +44,7 @@ angular.module('app')
           if ($scope.username.text == undefined || $scope.username.text == '')
             $state.go('forbidden'); // go to forbidden page
           else
-            $state.go('select-track');
+            $state.go('select-track'); // go to select track page
         };
 
         // when clicking next after choosing a vehicle
@@ -52,7 +52,7 @@ angular.module('app')
           if ($scope.username.text == undefined || $scope.username.text == '')
             $state.go('forbidden'); // go to forbidden page
           else
-            $state.go('modify-code');
+            $state.go('vehicle-code'); // go to vehicle code page
         };
       }
     },

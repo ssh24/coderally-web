@@ -16,18 +16,12 @@
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300);
 
-/*font-weight: 300;
-font-family: 'Roboto', sans-serif;*/
-
 body {
-    background-color: #3756A0;
+    background-color: #293a56;
 }
 
-.footer {
-    background-color: #434F66 !important;
-    margin-top: 120px !important;
-    padding: 20px !important;
-}
+html, body, #container { height: 100%; }
+body > #container { height: auto; min-height: 100%; }
 
 #page-title {
     font-weight: 1600;
@@ -42,24 +36,18 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-#upload-input {
-    display: none;
-}
+.ace_editor { height: 200px; width: 100%;}
 
 #footer {
-   position:absolute;
-   bottom:0;
-   width:100%;
-   height:30px;   /* Height of the footer */
-   color: white;
+ clear: both;
+ position: relative;
+ z-index: 10;
+ height: 3em;
+ margin-top: -3em;
+ color: white;
 }
 
-#username-form,
-#agent-form,
-#custom-server-form {
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
+#content { padding-bottom: 3em; }
 
 table th {
     padding: 20px;
@@ -75,11 +63,9 @@ table {
 
 .selected img {border: 5px solid cornflowerblue;}
 
-#editor,
-#editor_result {
-    width: 100%;
-    height: 400px;
-    border-radius: 3px;
+.imgContainer{
+  display:inline-block;
+  padding-left: 10px;
 }
 
 #race-seg .medium.header {

@@ -2,6 +2,9 @@
 
 /* select vehicle views file */
 
+var Login = require('../views/login-view');
+var SelectTrack = require('../views/select-track-view');
+
 function SelectVehicle() {
   // utils needed for this module
   this.vehicles = {};
@@ -12,6 +15,9 @@ function SelectVehicle() {
   this.vehicles.selected = '';
 
   this.chosenTrack = by.id('chosen-track');
+
+  this.login = new Login();
+  this.selectTrack = new SelectTrack();
 }
 
 // get the chosen track
@@ -50,19 +56,16 @@ SelectVehicle.prototype.goToSelectTrack = function() {
 };
 
 // continue to modify code
-SelectVehicle.prototype.goToModifyCode = function() {
+SelectVehicle.prototype.goToVehicleCode = function() {
   return element(this.vehicles.continue).click();
 };
 
 // do a full select vehicle
 SelectVehicle.prototype.doFullSelectVehicle = function(options) {
-  var track = options.track.name;
-  var vehicle = options.track.vehicles[3].name;
+  var vehicle = options.name;
 
-  return this.login.doFullLogin(options)
-    .then(this.selectATrack.bind(this, track))
-    .then(this.selectAVehicle.bind(this, vehicle))
-    .then(this.goToModifyCode.bind(this));
+  return this.selectAVehicle(vehicle)
+    .then(this.goToVehicleCode.bind(this));
 };
 
 module.exports = SelectVehicle;

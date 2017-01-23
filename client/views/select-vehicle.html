@@ -43,7 +43,9 @@
         </div>
       </div>
       <div class="ui very padded segment">
-        <h3 id="chosen-track" style="color:blue">Track chosen: {{chosenTrack.chosen.tName}}</h3>
+        <h3 style="color:blue">Track chosen: </h3>
+        <img ng-src="{{chosenTrack.chosen.tImage}}" height="100" width="=100" style='border:3px solid #000000' />
+        <p id="chosen-track">{{chosenTrack.chosen.tName}}</p>
         <h3>Please select a vehicle: </h3>
         <div>
           <table class="ui table">
