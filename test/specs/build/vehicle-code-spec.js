@@ -18,6 +18,15 @@ describe('Vehicle Code Test -', function() {
 
   var login, selectTrack, selectVehicle, vehicleCode, utils;
 
+  var info = {
+    'name': 'buggy_orange',
+    'acceleration': '100',
+    'weight': '100',
+    'armor': '500',
+    'traction': '100',
+    'turning': '100',
+  };
+
   before(function() {
     login = new Login();
     selectTrack = new SelectTrack();
@@ -28,7 +37,7 @@ describe('Vehicle Code Test -', function() {
   });
 
   // login and check for vehicle code page and logout
-  it('Check for vehicle code page after logging in', function() {
+  it('Login, check for vehicle code page and logout', function() {
     login.doFullLogin(config.login)
       .then(selectTrack.doFullSelectTrack.bind(selectTrack, config.login.track))
       .then(selectVehicle.doFullSelectVehicle.bind(selectVehicle,
@@ -43,6 +52,29 @@ describe('Vehicle Code Test -', function() {
       .then(function() {
         expect(browser.getCurrentUrl()).to.eventually
           .contain('#/login');
+      });
+  });
+
+  // get selected race informations
+  it('Get selected race information', function() {
+    login.doFullLogin(config.login)
+      .then(selectTrack.doFullSelectTrack.bind(selectTrack, config.login.track))
+      .then(selectVehicle.doFullSelectVehicle.bind(selectVehicle,
+        config.login.track.vehicles[3]))
+      .then(function() {
+        expect(vehicleCode.getSelectedTrackInfo.call(vehicleCode)).to.eventually
+          .equal(config.login.track.name);
+        expect(vehicleCode.getSelectedVehicleInfo.call(vehicleCode)).to
+          .eventually.equal(config.login.track.vehicles[3].name);
+      });
+  });
+
+  // copy vehicle code
+  it('Copy vehicle code', function() {
+    vehicleCode.copyVehicleCode()
+      .then(function() {
+        expect(vehicleCode.getSuccessCopyMessage.call(vehicleCode)).to
+          .eventually.equal('Successfully copied to clipboard');
       });
   });
 });

@@ -26,7 +26,7 @@ describe('Select Vehicle Test -', function() {
   });
 
   // login and check for select vehicle page and logout
-  it('Check for select vehicle page after logging in', function() {
+  it('Login, check for select vehicle page and logout', function() {
     login.doFullLogin(config.login)
       .then(selectTrack.doFullSelectTrack.bind(selectTrack, config.login.track))
       .then(function() {
